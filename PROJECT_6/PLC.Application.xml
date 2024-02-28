@@ -1,0 +1,2483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbolconfiguration xmlns="http://www.3s-software.com/schemas/Symbolconfiguration.xsd">
+  <Header>
+    <Version>3.5.14.0</Version>
+    <SymbolConfigObject version="3.5.16.30" runtimeid="3.5.16.80" libversion="3.5.16.0" compiler="3.5.16.80" lmm="3.5.16.0" profile="V20.3.3.0" settings="SupportOPCUA, LayoutCalculator=CompatibilityClientSideLayoutCalculator" />
+    <ProjectInfo name="766-26.05.2023" devicename="PLC" appname="Application" />
+  </Header>
+  <TypeList>
+    <TypeSimple name="T_BOOL" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" />
+    <TypeSimple name="T_BYTE" size="1" swapsize="1" typeclass="Byte" iecname="BYTE" />
+    <TypeSimple name="T_DINT" size="4" swapsize="4" typeclass="DInt" iecname="DINT" />
+    <TypeSimple name="T_DWORD" size="4" swapsize="4" typeclass="DWord" iecname="DWORD" />
+    <TypeSimple name="T_INT" size="2" swapsize="2" typeclass="Int" iecname="INT" />
+    <TypeSimple name="T_LREAL" size="8" swapsize="8" typeclass="LReal" iecname="LREAL" />
+    <TypeSimple name="T_REAL" size="4" swapsize="4" typeclass="Real" iecname="REAL" />
+    <TypeSimple name="T_STRING" size="81" swapsize="0" typeclass="String" iecname="STRING" />
+    <TypeSimple name="T_TIME" size="4" swapsize="4" typeclass="Time" iecname="TIME" />
+    <TypeSimple name="T_UDINT" size="4" swapsize="4" typeclass="UDInt" iecname="UDINT" />
+    <TypeSimple name="T_UINT" size="2" swapsize="2" typeclass="UInt" iecname="UINT" />
+    <TypeSimple name="T_WORD" size="2" swapsize="2" typeclass="Word" iecname="WORD" />
+    <TypeArray name="T_ARRAY__0__16__OF_REAL" size="68" nativesize="68" typeclass="Array" iecname="ARRAY [0..16] OF REAL" basetype="T_REAL">
+      <ArrayDim minrange="0" maxrange="16" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__7__OF_BYTE" size="8" nativesize="8" typeclass="Array" iecname="ARRAY [0..7] OF BYTE" basetype="T_BYTE">
+      <ArrayDim minrange="0" maxrange="7" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__7__OF_REAL" size="32" nativesize="32" typeclass="Array" iecname="ARRAY [0..7] OF REAL" basetype="T_REAL">
+      <ArrayDim minrange="0" maxrange="7" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__8__OF_WORD" size="18" nativesize="18" typeclass="Array" iecname="ARRAY [0..8] OF WORD" basetype="T_WORD">
+      <ArrayDim minrange="0" maxrange="8" />
+    </TypeArray>
+    <TypeSimple name="T_Axis_Ref" size="4" swapsize="4" typeclass="Userdef" iecname="Axis_Ref" aliasedtype="T_TYPE_REFERENCE_1" aliasediecname="TYPE_REFERENCE" />
+    <TypeUserDef name="T_ET_Buffer_Mode" size="2" nativesize="2" swapsize="2" typeclass="Enum" iecname="ET_Buffer_Mode" basetype="T_INT">
+      <UserDefElement type="T_ET_Buffer_Mode" iecname="Aborting" enumvalue="0" />
+      <UserDefElement type="T_ET_Buffer_Mode" iecname="Buffered" enumvalue="1" />
+      <UserDefElement type="T_ET_Buffer_Mode" iecname="BlendingLow" enumvalue="2" />
+      <UserDefElement type="T_ET_Buffer_Mode" iecname="BlendingPrevious" enumvalue="3" />
+      <UserDefElement type="T_ET_Buffer_Mode" iecname="BlendingNext" enumvalue="4" />
+      <UserDefElement type="T_ET_Buffer_Mode" iecname="BlendingHigh" enumvalue="5" />
+      <UserDefElement type="T_ET_Buffer_Mode" iecname="StartAtMasterposition" enumvalue="6" />
+    </TypeUserDef>
+    <TypeUserDef name="T_ET_Direction" size="4" nativesize="4" swapsize="4" typeclass="Enum" iecname="ET_Direction" basetype="T_UDINT">
+      <UserDefElement type="T_ET_Direction" iecname="PositiveDirection" enumvalue="0" />
+      <UserDefElement type="T_ET_Direction" iecname="NegativeDirection" enumvalue="1" />
+      <UserDefElement type="T_ET_Direction" iecname="ShortestWay" enumvalue="2" />
+    </TypeUserDef>
+    <TypeUserDef name="T_ET_JobState" size="4" nativesize="4" swapsize="4" typeclass="Enum" iecname="ET_JobState" basetype="T_UDINT">
+      <UserDefElement type="T_ET_JobState" iecname="Idle" enumvalue="0" />
+      <UserDefElement type="T_ET_JobState" iecname="Linked" enumvalue="1" />
+      <UserDefElement type="T_ET_JobState" iecname="Executing" enumvalue="2" />
+      <UserDefElement type="T_ET_JobState" iecname="Steady" enumvalue="3" />
+      <UserDefElement type="T_ET_JobState" iecname="Done" enumvalue="4" />
+      <UserDefElement type="T_ET_JobState" iecname="Aborted" enumvalue="5" />
+      <UserDefElement type="T_ET_JobState" iecname="Error" enumvalue="6" />
+      <UserDefElement type="T_ET_JobState" iecname="ScheduledToBeAborted" enumvalue="7" />
+      <UserDefElement type="T_ET_JobState" iecname="ScheduledToBeDone" enumvalue="8" />
+    </TypeUserDef>
+    <TypeUserDef name="T_ET_Result" size="4" nativesize="4" swapsize="4" typeclass="Enum" iecname="ET_Result" basetype="T_UDINT">
+      <UserDefElement type="T_ET_Result" iecname="Ok" enumvalue="0" />
+      <UserDefElement type="T_ET_Result" iecname="UnexpectedReturnValue" enumvalue="1" />
+      <UserDefElement type="T_ET_Result" iecname="SemaphoreError" enumvalue="2" />
+      <UserDefElement type="T_ET_Result" iecname="LimitModeInvalid" enumvalue="3" />
+      <UserDefElement type="T_ET_Result" iecname="NoBusCommunication" enumvalue="4" />
+      <UserDefElement type="T_ET_Result" iecname="PositionOutsideModulo" enumvalue="5" />
+      <UserDefElement type="T_ET_Result" iecname="JerkOutOfRange" enumvalue="6" />
+      <UserDefElement type="T_ET_Result" iecname="AccelerationOutOfRange" enumvalue="7" />
+      <UserDefElement type="T_ET_Result" iecname="DecelerationOutOfRange" enumvalue="8" />
+      <UserDefElement type="T_ET_Result" iecname="VelocityOutOfRange" enumvalue="9" />
+      <UserDefElement type="T_ET_Result" iecname="AlgorithmInvalid" enumvalue="10" />
+      <UserDefElement type="T_ET_Result" iecname="BufferModeInvalid" enumvalue="11" />
+      <UserDefElement type="T_ET_Result" iecname="AxisIsDisabled" enumvalue="12" />
+      <UserDefElement type="T_ET_Result" iecname="AxisIsStopping" enumvalue="13" />
+      <UserDefElement type="T_ET_Result" iecname="AxisNotHomed" enumvalue="14" />
+      <UserDefElement type="T_ET_Result" iecname="AxisInErrorStop" enumvalue="15" />
+      <UserDefElement type="T_ET_Result" iecname="BufferSaturated" enumvalue="16" />
+      <UserDefElement type="T_ET_Result" iecname="BufferNotSupported" enumvalue="17" />
+      <UserDefElement type="T_ET_Result" iecname="PLCopenStateInvalid" enumvalue="18" />
+      <UserDefElement type="T_ET_Result" iecname="JobInvalid" enumvalue="19" />
+      <UserDefElement type="T_ET_Result" iecname="MasterInvalid" enumvalue="20" />
+      <UserDefElement type="T_ET_Result" iecname="OutOfMemory" enumvalue="21" />
+      <UserDefElement type="T_ET_Result" iecname="NoAccessToData" enumvalue="22" />
+      <UserDefElement type="T_ET_Result" iecname="LimitsInvalid" enumvalue="23" />
+      <UserDefElement type="T_ET_Result" iecname="AxisNotDisabled" enumvalue="24" />
+      <UserDefElement type="T_ET_Result" iecname="InvalidMasterAddress" enumvalue="25" />
+      <UserDefElement type="T_ET_Result" iecname="InvalidRatioNumerator" enumvalue="26" />
+      <UserDefElement type="T_ET_Result" iecname="InvalidRatioDenominator" enumvalue="27" />
+      <UserDefElement type="T_ET_Result" iecname="AxisInvalid" enumvalue="28" />
+      <UserDefElement type="T_ET_Result" iecname="DriveInvalid" enumvalue="29" />
+      <UserDefElement type="T_ET_Result" iecname="DriveNotDisabled" enumvalue="30" />
+      <UserDefElement type="T_ET_Result" iecname="ExistingConnection" enumvalue="31" />
+      <UserDefElement type="T_ET_Result" iecname="ModuloAxisNotSupported" enumvalue="32" />
+      <UserDefElement type="T_ET_Result" iecname="NotSupportedWithDrive" enumvalue="33" />
+      <UserDefElement type="T_ET_Result" iecname="PowerStateError" enumvalue="34" />
+      <UserDefElement type="T_ET_Result" iecname="DriveInError" enumvalue="35" />
+      <UserDefElement type="T_ET_Result" iecname="HomingIsAlreadyActive" enumvalue="36" />
+      <UserDefElement type="T_ET_Result" iecname="AxisNotInStandstill" enumvalue="37" />
+      <UserDefElement type="T_ET_Result" iecname="JobStartedWhileAxisIsHoming" enumvalue="38" />
+      <UserDefElement type="T_ET_Result" iecname="AxisResetInExecutingState" enumvalue="39" />
+      <UserDefElement type="T_ET_Result" iecname="InvalidCamTableID" enumvalue="40" />
+      <UserDefElement type="T_ET_Result" iecname="MasterIsNotModulo" enumvalue="41" />
+      <UserDefElement type="T_ET_Result" iecname="LastMovementIsInvalid" enumvalue="42" />
+      <UserDefElement type="T_ET_Result" iecname="InvalidLambda" enumvalue="43" />
+      <UserDefElement type="T_ET_Result" iecname="InvalidC" enumvalue="44" />
+      <UserDefElement type="T_ET_Result" iecname="InvalidM" enumvalue="45" />
+      <UserDefElement type="T_ET_Result" iecname="InvalidK" enumvalue="46" />
+      <UserDefElement type="T_ET_Result" iecname="InvalidCustomJob" enumvalue="47" />
+      <UserDefElement type="T_ET_Result" iecname="InvalidFloatingValue" enumvalue="48" />
+      <UserDefElement type="T_ET_Result" iecname="MemAllocFailed" enumvalue="49" />
+      <UserDefElement type="T_ET_Result" iecname="EventDeleteFailure" enumvalue="50" />
+      <UserDefElement type="T_ET_Result" iecname="ModuloRangeInvalid" enumvalue="51" />
+      <UserDefElement type="T_ET_Result" iecname="InvalidCaptureSource" enumvalue="52" />
+      <UserDefElement type="T_ET_Result" iecname="DeviceAccessFailed" enumvalue="53" />
+      <UserDefElement type="T_ET_Result" iecname="CaptureSourceAlreadyInUse" enumvalue="54" />
+      <UserDefElement type="T_ET_Result" iecname="InvalidConfiguration" enumvalue="55" />
+      <UserDefElement type="T_ET_Result" iecname="NoCamInJobOnSlaveAxis" enumvalue="56" />
+      <UserDefElement type="T_ET_Result" iecname="MasterAxisNotHomed" enumvalue="57" />
+      <UserDefElement type="T_ET_Result" iecname="RealTimeConfigurationOfParameterFailed" enumvalue="58" />
+      <UserDefElement type="T_ET_Result" iecname="DrivePowerLoss" enumvalue="59" />
+      <UserDefElement type="T_ET_Result" iecname="NotSupportedWithFeedbackAxis" enumvalue="60" />
+      <UserDefElement type="T_ET_Result" iecname="ErrorInEncoderCallbackResultDetected" enumvalue="61" />
+      <UserDefElement type="T_ET_Result" iecname="InvalidFeedResolution" enumvalue="62" />
+      <UserDefElement type="T_ET_Result" iecname="InvalidFeedConstant" enumvalue="63" />
+      <UserDefElement type="T_ET_Result" iecname="NoEncoderSupplyDetected" enumvalue="64" />
+      <UserDefElement type="T_ET_Result" iecname="InvalidDigitalInputConfiguration" enumvalue="65" />
+      <UserDefElement type="T_ET_Result" iecname="InvalidDeviceHandle" enumvalue="66" />
+      <UserDefElement type="T_ET_Result" iecname="ErrorSettingOutputs" enumvalue="67" />
+      <UserDefElement type="T_ET_Result" iecname="StartAdditiveJobDuringSuperimpose" enumvalue="68" />
+      <UserDefElement type="T_ET_Result" iecname="HomingNotStarted" enumvalue="69" />
+      <UserDefElement type="T_ET_Result" iecname="InvalidDirection" enumvalue="70" />
+      <UserDefElement type="T_ET_Result" iecname="InternalErrorInLockingMovementChange" enumvalue="71" />
+      <UserDefElement type="T_ET_Result" iecname="InternalErrorInLockingDrive" enumvalue="72" />
+      <UserDefElement type="T_ET_Result" iecname="InternalErrorInLockingHoming" enumvalue="73" />
+      <UserDefElement type="T_ET_Result" iecname="InternalErrorInResetingAxis" enumvalue="74" />
+      <UserDefElement type="T_ET_Result" iecname="PositionOutOfSetLimits" enumvalue="75" />
+      <UserDefElement type="T_ET_Result" iecname="AxisInInvalidState" enumvalue="76" />
+      <UserDefElement type="T_ET_Result" iecname="PLCApplicationStoppedWhileAxisExecutingJob" enumvalue="77" />
+      <UserDefElement type="T_ET_Result" iecname="AxisNotHomedAndHasInvalidLastMovement" enumvalue="78" />
+      <UserDefElement type="T_ET_Result" iecname="InternalErrorInCyclicCalculation" enumvalue="79" />
+      <UserDefElement type="T_ET_Result" iecname="HomingFailed" enumvalue="80" />
+      <UserDefElement type="T_ET_Result" iecname="BlendingOvershootsFirstJob" enumvalue="81" />
+      <UserDefElement type="T_ET_Result" iecname="JobTypeNotAllowedToBeBlended" enumvalue="82" />
+      <UserDefElement type="T_ET_Result" iecname="PreactiveJobNotAllowedToBeFollowedByBlending" enumvalue="83" />
+      <UserDefElement type="T_ET_Result" iecname="ActiveJobNotAllowedToBeFollowedByBlending" enumvalue="84" />
+      <UserDefElement type="T_ET_Result" iecname="FBBusyBufferModeNotPossible" enumvalue="85" />
+      <UserDefElement type="T_ET_Result" iecname="TimeNotRecorded" enumvalue="86" />
+      <UserDefElement type="T_ET_Result" iecname="PhaseUpForbiddenDueToLicense" enumvalue="87" />
+      <UserDefElement type="T_ET_Result" iecname="MasterMovementDataNotValid" enumvalue="88" />
+      <UserDefElement type="T_ET_Result" iecname="EncoderCommunicationError" enumvalue="89" />
+      <UserDefElement type="T_ET_Result" iecname="EncoderPowerError" enumvalue="90" />
+      <UserDefElement type="T_ET_Result" iecname="ExpertIoError" enumvalue="91" />
+      <UserDefElement type="T_ET_Result" iecname="InvalidCustomJobStateTransition" enumvalue="92" />
+      <UserDefElement type="T_ET_Result" iecname="ExceededTxMaxRamSize" enumvalue="93" />
+      <UserDefElement type="T_ET_Result" iecname="NoSynchronousMotionToDeregister" enumvalue="94" />
+      <UserDefElement type="T_ET_Result" iecname="AxisIsUsedAsMasterForSynchronousMotion" enumvalue="95" />
+      <UserDefElement type="T_ET_Result" iecname="MasterAxisIsCurrentlyHoming" enumvalue="96" />
+      <UserDefElement type="T_ET_Result" iecname="InvalidBus" enumvalue="97" />
+      <UserDefElement type="T_ET_Result" iecname="AxisAlreadyUsed" enumvalue="98" />
+      <UserDefElement type="T_ET_Result" iecname="InvalidOperationForActiveMultiAxisJob" enumvalue="99" />
+      <UserDefElement type="T_ET_Result" iecname="InvalidHandle" enumvalue="100" />
+      <UserDefElement type="T_ET_Result" iecname="NullObject" enumvalue="101" />
+      <UserDefElement type="T_ET_Result" iecname="MultiAxisGroupIsExecuting" enumvalue="102" />
+      <UserDefElement type="T_ET_Result" iecname="NoSlaveChannelAddedToMultiAxisJob" enumvalue="103" />
+      <UserDefElement type="T_ET_Result" iecname="ASlaveChannelOfMultiAxisGroupWasUnableToStart" enumvalue="104" />
+      <UserDefElement type="T_ET_Result" iecname="UserSpecifiedErrorStop" enumvalue="105" />
+      <UserDefElement type="T_ET_Result" iecname="MultiAxisGroupChannelLock" enumvalue="106" />
+      <UserDefElement type="T_ET_Result" iecname="CannotWriteMovementValuesToSlaveChannel" enumvalue="107" />
+      <UserDefElement type="T_ET_Result" iecname="SlaveChannelInvalid" enumvalue="108" />
+      <UserDefElement type="T_ET_Result" iecname="MasterChannelInvalid" enumvalue="109" />
+      <UserDefElement type="T_ET_Result" iecname="InvalidMultiAxisGroupCallback" enumvalue="110" />
+      <UserDefElement type="T_ET_Result" iecname="MaxNumberOfSlaveChannelsExceeded" enumvalue="111" />
+      <UserDefElement type="T_ET_Result" iecname="MaxNumberOfMasterChannelsExceeded" enumvalue="112" />
+      <UserDefElement type="T_ET_Result" iecname="MultiAxisGroupNotStarted" enumvalue="113" />
+      <UserDefElement type="T_ET_Result" iecname="EmergencyStopRequiredByPlcApplication" enumvalue="114" />
+      <UserDefElement type="T_ET_Result" iecname="InvalidCaptureEdge" enumvalue="115" />
+      <UserDefElement type="T_ET_Result" iecname="JobAborted" enumvalue="116" />
+      <UserDefElement type="T_ET_Result" iecname="AxisIsHoming" enumvalue="117" />
+      <UserDefElement type="T_ET_Result" iecname="SlaveChannelNotAddedToMultiAxisGroup" enumvalue="118" />
+      <UserDefElement type="T_ET_Result" iecname="MasterChannelNotAddedToMultiAxisGroup" enumvalue="119" />
+      <UserDefElement type="T_ET_Result" iecname="XValuesNotStrictlyMonotonic" enumvalue="120" />
+      <UserDefElement type="T_ET_Result" iecname="OperationModeChangeNotAllowedForAxisNotInStandstill" enumvalue="121" />
+      <UserDefElement type="T_ET_Result" iecname="OperationModeIDNsNotMapped" enumvalue="122" />
+      <UserDefElement type="T_ET_Result" iecname="MasterSlaveCascadeFormsLoop" enumvalue="123" />
+      <UserDefElement type="T_ET_Result" iecname="OperationModeChangeNotAllowedForMasterAxisNotInStandstill" enumvalue="124" />
+      <UserDefElement type="T_ET_Result" iecname="NotPossibleToStartMoveSuperImposedOnCsvOperationModeAxis" enumvalue="125" />
+      <UserDefElement type="T_ET_Result" iecname="AbortingTorqueControlNotPossibleWithThisJob" enumvalue="126" />
+      <UserDefElement type="T_ET_Result" iecname="NotPossibleToStartMoveSuperImposedOnCstOperationModeAxis" enumvalue="127" />
+      <UserDefElement type="T_ET_Result" iecname="TorqueInValueIsOutOfRange" enumvalue="128" />
+      <UserDefElement type="T_ET_Result" iecname="StartAtMasterPositionDoesNotInterruptACam" enumvalue="129" />
+      <UserDefElement type="T_ET_Result" iecname="MasterStartPositionIsNotInsidePreviousCamRange" enumvalue="130" />
+      <UserDefElement type="T_ET_Result" iecname="MasterChangeNotAllowedWithStartAtMasterPosition" enumvalue="131" />
+      <UserDefElement type="T_ET_Result" iecname="NegativeTorqueRampValueNotAllowed" enumvalue="132" />
+      <UserDefElement type="T_ET_Result" iecname="CamLawNotDefined" enumvalue="133" />
+      <UserDefElement type="T_ET_Result" iecname="MasterPositionOutsideCamRange" enumvalue="134" />
+      <UserDefElement type="T_ET_Result" iecname="TorqueJobNotAllowedWithSimulatedDrive" enumvalue="135" />
+      <UserDefElement type="T_ET_Result" iecname="ConflictingIdnMapping" enumvalue="136" />
+      <UserDefElement type="T_ET_Result" iecname="TimeoutWhileEnablingAxis" enumvalue="137" />
+      <UserDefElement type="T_ET_Result" iecname="WrongOperationModeOnDrive" enumvalue="138" />
+      <UserDefElement type="T_ET_Result" iecname="EncoderNotValidWithinInitializationTime" enumvalue="139" />
+    </TypeUserDef>
+    <TypeUserDef name="T_ET_Result_1" size="4" nativesize="4" swapsize="4" typeclass="Enum" iecname="ET_Result" basetype="T_UDINT">
+      <UserDefElement type="T_ET_Result_1" iecname="Ok" enumvalue="0" />
+      <UserDefElement type="T_ET_Result_1" iecname="UnexpectedReturnValue" enumvalue="1" />
+      <UserDefElement type="T_ET_Result_1" iecname="AxisInvalid" enumvalue="2" />
+      <UserDefElement type="T_ET_Result_1" iecname="IfMotionCommandNotSupported" enumvalue="3" />
+      <UserDefElement type="T_ET_Result_1" iecname="NoBusCommunication" enumvalue="4" />
+      <UserDefElement type="T_ET_Result_1" iecname="PositionOutsideModulo" enumvalue="5" />
+      <UserDefElement type="T_ET_Result_1" iecname="VelocityOutOfRange" enumvalue="6" />
+      <UserDefElement type="T_ET_Result_1" iecname="AccelerationOutOfRange" enumvalue="7" />
+      <UserDefElement type="T_ET_Result_1" iecname="DecelerationOutOfRange" enumvalue="8" />
+      <UserDefElement type="T_ET_Result_1" iecname="JerkOutOfRange" enumvalue="9" />
+      <UserDefElement type="T_ET_Result_1" iecname="BufferModeInvalid" enumvalue="10" />
+      <UserDefElement type="T_ET_Result_1" iecname="AxisIsDisabled" enumvalue="11" />
+      <UserDefElement type="T_ET_Result_1" iecname="AxisIsStopping" enumvalue="12" />
+      <UserDefElement type="T_ET_Result_1" iecname="AxisNotHomed" enumvalue="13" />
+      <UserDefElement type="T_ET_Result_1" iecname="AxisInErrorStop" enumvalue="14" />
+      <UserDefElement type="T_ET_Result_1" iecname="BufferSaturated" enumvalue="15" />
+      <UserDefElement type="T_ET_Result_1" iecname="BufferNotSupported" enumvalue="16" />
+      <UserDefElement type="T_ET_Result_1" iecname="FBBusyBufferModeNotPossible" enumvalue="17" />
+      <UserDefElement type="T_ET_Result_1" iecname="MasterInvalid" enumvalue="19" />
+      <UserDefElement type="T_ET_Result_1" iecname="DirectionInvalid" enumvalue="20" />
+      <UserDefElement type="T_ET_Result_1" iecname="NotAbleToResetAxis" enumvalue="21" />
+      <UserDefElement type="T_ET_Result_1" iecname="InvalidRatioNumerator" enumvalue="22" />
+      <UserDefElement type="T_ET_Result_1" iecname="InvalidRatioDenominator" enumvalue="23" />
+      <UserDefElement type="T_ET_Result_1" iecname="OutOfMemory" enumvalue="24" />
+      <UserDefElement type="T_ET_Result_1" iecname="InvalidMasterAddress" enumvalue="25" />
+      <UserDefElement type="T_ET_Result_1" iecname="DriveInError" enumvalue="35" />
+      <UserDefElement type="T_ET_Result_1" iecname="HomingIsAlreadyActive" enumvalue="36" />
+      <UserDefElement type="T_ET_Result_1" iecname="AxisNotInStandstill" enumvalue="37" />
+      <UserDefElement type="T_ET_Result_1" iecname="JobStartedWhileAxisIsHoming" enumvalue="38" />
+      <UserDefElement type="T_ET_Result_1" iecname="AxisResetInExecutingState" enumvalue="39" />
+      <UserDefElement type="T_ET_Result_1" iecname="InvalidCamTableID" enumvalue="40" />
+      <UserDefElement type="T_ET_Result_1" iecname="MasterIsNotModulo" enumvalue="41" />
+      <UserDefElement type="T_ET_Result_1" iecname="LastMovementIsInvalid" enumvalue="42" />
+      <UserDefElement type="T_ET_Result_1" iecname="InvalidLambda" enumvalue="43" />
+      <UserDefElement type="T_ET_Result_1" iecname="InvalidC" enumvalue="44" />
+      <UserDefElement type="T_ET_Result_1" iecname="InvalidM" enumvalue="45" />
+      <UserDefElement type="T_ET_Result_1" iecname="InvalidK" enumvalue="46" />
+      <UserDefElement type="T_ET_Result_1" iecname="InvalidCaptureSource" enumvalue="47" />
+      <UserDefElement type="T_ET_Result_1" iecname="DeviceAccessFailed" enumvalue="48" />
+      <UserDefElement type="T_ET_Result_1" iecname="CaptureSourceAlreadyInUse" enumvalue="49" />
+      <UserDefElement type="T_ET_Result_1" iecname="InvalidConfiguration" enumvalue="50" />
+      <UserDefElement type="T_ET_Result_1" iecname="NoCamInJobOnSlaveAxis" enumvalue="56" />
+      <UserDefElement type="T_ET_Result_1" iecname="MasterAxisNotHomed" enumvalue="57" />
+      <UserDefElement type="T_ET_Result_1" iecname="RealTimeConfigurationOfParameterFailed" enumvalue="58" />
+      <UserDefElement type="T_ET_Result_1" iecname="DrivePowerLoss" enumvalue="59" />
+      <UserDefElement type="T_ET_Result_1" iecname="NotSupportedWithFeedbackAxis" enumvalue="60" />
+      <UserDefElement type="T_ET_Result_1" iecname="NoEncoderSupplyDetected" enumvalue="61" />
+      <UserDefElement type="T_ET_Result_1" iecname="InvalidDigitalInputConfiguration" enumvalue="62" />
+      <UserDefElement type="T_ET_Result_1" iecname="InvalidDeviceHandle" enumvalue="63" />
+      <UserDefElement type="T_ET_Result_1" iecname="VelocityDifferenceOutOfRange" enumvalue="64" />
+      <UserDefElement type="T_ET_Result_1" iecname="StartAdditiveJobDuringSuperimpose" enumvalue="65" />
+      <UserDefElement type="T_ET_Result_1" iecname="ActiveJobNotAllowedToBeFollowedByBlending" enumvalue="66" />
+      <UserDefElement type="T_ET_Result_1" iecname="InvalidCustomJobStateTransition" enumvalue="67" />
+      <UserDefElement type="T_ET_Result_1" iecname="PreactiveJobNotAllowedToBeFollowedByBlending" enumvalue="68" />
+      <UserDefElement type="T_ET_Result_1" iecname="HomingFailed" enumvalue="69" />
+      <UserDefElement type="T_ET_Result_1" iecname="MasterAxisIsCurrentlyHoming" enumvalue="70" />
+      <UserDefElement type="T_ET_Result_1" iecname="AxisIsUsedAsMasterForSynchronousMotion" enumvalue="71" />
+      <UserDefElement type="T_ET_Result_1" iecname="ASlaveChannelOfMultiAxisGroupWasUnableToStart" enumvalue="72" />
+      <UserDefElement type="T_ET_Result_1" iecname="InvalidCaptureEdge" enumvalue="73" />
+      <UserDefElement type="T_ET_Result_1" iecname="EmergencyStopRequiredByPlcApplication" enumvalue="74" />
+      <UserDefElement type="T_ET_Result_1" iecname="InvalidNumberOfInterpolatedCamPoints" enumvalue="75" />
+      <UserDefElement type="T_ET_Result_1" iecname="MaxMasterPositionIsLowerThenMinMasterPosition" enumvalue="76" />
+      <UserDefElement type="T_ET_Result_1" iecname="InvalidInterpolationMode" enumvalue="77" />
+      <UserDefElement type="T_ET_Result_1" iecname="XValuesNotStrictlyMonotonic" enumvalue="78" />
+      <UserDefElement type="T_ET_Result_1" iecname="BlendingOvershootsFirstJob" enumvalue="79" />
+      <UserDefElement type="T_ET_Result_1" iecname="MasterSlaveCascadeFormsLoop" enumvalue="80" />
+      <UserDefElement type="T_ET_Result_1" iecname="OperationModeInvalid" enumvalue="81" />
+      <UserDefElement type="T_ET_Result_1" iecname="OperationModeChangeNotAllowedForAxisNotInStandstill" enumvalue="82" />
+      <UserDefElement type="T_ET_Result_1" iecname="OperationModeIDNsNotMapped" enumvalue="83" />
+      <UserDefElement type="T_ET_Result_1" iecname="OperationModeChangeNotAllowedForMasterAxisNotInStandstill" enumvalue="84" />
+      <UserDefElement type="T_ET_Result_1" iecname="ModuloAxisNotSupportedWithOperationModeVelocity" enumvalue="85" />
+      <UserDefElement type="T_ET_Result_1" iecname="NotPossibleToStartMoveSuperImposedOnCsvOperationModeAxis" enumvalue="86" />
+      <UserDefElement type="T_ET_Result_1" iecname="NotSupportedWithLimitedAxis" enumvalue="87" />
+      <UserDefElement type="T_ET_Result_1" iecname="AbortingTorqueControlNotPossibleWithThisJob" enumvalue="88" />
+      <UserDefElement type="T_ET_Result_1" iecname="NotPossibleToStartMoveSuperImposedOnCstOperationModeAxis" enumvalue="89" />
+      <UserDefElement type="T_ET_Result_1" iecname="TorqueInValueIsOutOfRange" enumvalue="90" />
+      <UserDefElement type="T_ET_Result_1" iecname="StartAtMasterPositionDoesNotInterruptACam" enumvalue="91" />
+      <UserDefElement type="T_ET_Result_1" iecname="MasterStartPositionIsNotInsidePreviousCamRange" enumvalue="92" />
+      <UserDefElement type="T_ET_Result_1" iecname="MasterChangeNotAllowedWithStartAtMasterPosition" enumvalue="93" />
+      <UserDefElement type="T_ET_Result_1" iecname="NegativeTorqueRampValueNotAllowed" enumvalue="94" />
+      <UserDefElement type="T_ET_Result_1" iecname="TimeoutWhileEnablingAxis" enumvalue="95" />
+      <UserDefElement type="T_ET_Result_1" iecname="TorqueJobNotAllowedWithSimulatedDrive" enumvalue="96" />
+      <UserDefElement type="T_ET_Result_1" iecname="ConflictingIdnMapping" enumvalue="97" />
+      <UserDefElement type="T_ET_Result_1" iecname="WrongOperationModeOnDrive" enumvalue="98" />
+    </TypeUserDef>
+    <TypeUserDef name="T_F_TRIG" size="8" nativesize="8" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="F_TRIG">
+      <UserDefElement iecname="CLK" type="T_BOOL" byteoffset="4" vartype="VAR_INPUT" />
+      <UserDefElement iecname="Q" type="T_BOOL" byteoffset="5" vartype="VAR_OUTPUT" />
+    </TypeUserDef>
+    <TypeUserDef name="T_LinkNumber" size="1" nativesize="1" typeclass="Enum" iecname="LinkNumber" basetype="T_BYTE">
+      <UserDefElement type="T_LinkNumber" iecname="USBConsole" enumvalue="0" />
+      <UserDefElement type="T_LinkNumber" iecname="COM1" enumvalue="1" />
+      <UserDefElement type="T_LinkNumber" iecname="COM2" enumvalue="2" />
+      <UserDefElement type="T_LinkNumber" iecname="EthEmbed" enumvalue="3" />
+      <UserDefElement type="T_LinkNumber" iecname="CANEmbed" enumvalue="4" />
+      <UserDefElement type="T_LinkNumber" iecname="COM3" enumvalue="5" />
+    </TypeUserDef>
+    <TypeUserDef name="T_ObjectType" size="1" nativesize="1" typeclass="Enum" iecname="ObjectType" basetype="T_BYTE">
+      <UserDefElement type="T_ObjectType" iecname="MW" enumvalue="0" />
+      <UserDefElement type="T_ObjectType" iecname="I" enumvalue="1" />
+      <UserDefElement type="T_ObjectType" iecname="Q" enumvalue="2" />
+      <UserDefElement type="T_ObjectType" iecname="IW" enumvalue="3" />
+    </TypeUserDef>
+    <TypeSimple name="T_POINTER_TO_BYTE" size="4" swapsize="4" typeclass="Pointer" iecname="POINTER TO BYTE" />
+    <TypeUserDef name="T_StepFB" size="52" nativesize="52" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="StepFB">
+      <UserDefElement iecname="StepCikis1" type="T_BOOL" byteoffset="26" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis2" type="T_BOOL" byteoffset="27" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis3" type="T_BOOL" byteoffset="28" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis4" type="T_BOOL" byteoffset="29" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis5" type="T_BOOL" byteoffset="30" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis6" type="T_BOOL" byteoffset="31" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis7" type="T_BOOL" byteoffset="32" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis8" type="T_BOOL" byteoffset="33" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis9" type="T_BOOL" byteoffset="34" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis10" type="T_BOOL" byteoffset="35" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis11" type="T_BOOL" byteoffset="36" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis12" type="T_BOOL" byteoffset="37" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis13" type="T_BOOL" byteoffset="38" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis14" type="T_BOOL" byteoffset="39" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis15" type="T_BOOL" byteoffset="40" vartype="VAR_OUTPUT" />
+    </TypeUserDef>
+    <TypeUserDef name="T_TCP_ADDR_EXT" size="6" nativesize="6" typeclass="Userdef" pouclass="STRUCTURE" iecname="TCP_ADDR_EXT">
+      <UserDefElement iecname="A" type="T_BYTE" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="B" type="T_BYTE" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="C" type="T_BYTE" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="D" type="T_BYTE" byteoffset="3" vartype="VAR" />
+      <UserDefElement iecname="port" type="T_WORD" byteoffset="4" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_TON" size="28" nativesize="28" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="TON">
+      <UserDefElement iecname="IN" type="T_BOOL" byteoffset="4" vartype="VAR_INPUT" />
+      <UserDefElement iecname="PT" type="T_TIME" byteoffset="8" vartype="VAR_INPUT" />
+      <UserDefElement iecname="Q" type="T_BOOL" byteoffset="12" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="ET" type="T_TIME" byteoffset="16" vartype="VAR_OUTPUT" />
+    </TypeUserDef>
+    <TypeUserDef name="T_ADDR_EXT" size="0" nativesize="8" typeclass="Userdef" pouclass="UNION" iecname="ADDR_EXT">
+      <UserDefElement iecname="as_array" type="T_ARRAY__0__7__OF_BYTE" byteoffset="-1" vartype="VAR" />
+      <UserDefElement iecname="TcpAddr" type="T_TCP_ADDR_EXT" byteoffset="-1" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_MC_Buffer_Mode" size="2" nativesize="2" swapsize="2" typeclass="Enum" iecname="MC_Buffer_Mode" aliasedtype="T_ET_Buffer_Mode" aliasediecname="ET_Buffer_Mode" basetype="T_INT">
+      <UserDefElement type="T_ET_Buffer_Mode" iecname="Aborting" enumvalue="0" />
+      <UserDefElement type="T_ET_Buffer_Mode" iecname="Buffered" enumvalue="1" />
+      <UserDefElement type="T_ET_Buffer_Mode" iecname="BlendingLow" enumvalue="2" />
+      <UserDefElement type="T_ET_Buffer_Mode" iecname="BlendingPrevious" enumvalue="3" />
+      <UserDefElement type="T_ET_Buffer_Mode" iecname="BlendingNext" enumvalue="4" />
+      <UserDefElement type="T_ET_Buffer_Mode" iecname="BlendingHigh" enumvalue="5" />
+      <UserDefElement type="T_ET_Buffer_Mode" iecname="StartAtMasterposition" enumvalue="6" />
+    </TypeUserDef>
+    <TypeUserDef name="T_MC_Direction" size="4" nativesize="4" swapsize="4" typeclass="Enum" iecname="MC_Direction" aliasedtype="T_ET_Direction" aliasediecname="ET_Direction" basetype="T_UDINT">
+      <UserDefElement type="T_ET_Direction" iecname="PositiveDirection" enumvalue="0" />
+      <UserDefElement type="T_ET_Direction" iecname="NegativeDirection" enumvalue="1" />
+      <UserDefElement type="T_ET_Direction" iecname="ShortestWay" enumvalue="2" />
+    </TypeUserDef>
+    <TypeUserDef name="T_StepFB_1" size="76" nativesize="76" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="StepFB_1">
+      <UserDefElement iecname="StepGiris1" type="T_BOOL" byteoffset="4" vartype="VAR_INPUT" />
+      <UserDefElement iecname="StepGiris2" type="T_BOOL" byteoffset="5" vartype="VAR_INPUT" />
+      <UserDefElement iecname="StepGiris3" type="T_BOOL" byteoffset="6" vartype="VAR_INPUT" />
+      <UserDefElement iecname="StepGiris4" type="T_BOOL" byteoffset="7" vartype="VAR_INPUT" />
+      <UserDefElement iecname="StepGiris5" type="T_BOOL" byteoffset="8" vartype="VAR_INPUT" />
+      <UserDefElement iecname="StepGiris6" type="T_BOOL" byteoffset="9" vartype="VAR_INPUT" />
+      <UserDefElement iecname="StepGiris7" type="T_BOOL" byteoffset="10" vartype="VAR_INPUT" />
+      <UserDefElement iecname="StepGiris8" type="T_BOOL" byteoffset="11" vartype="VAR_INPUT" />
+      <UserDefElement iecname="StepGiris9" type="T_BOOL" byteoffset="12" vartype="VAR_INPUT" />
+      <UserDefElement iecname="StepGiris10" type="T_BOOL" byteoffset="13" vartype="VAR_INPUT" />
+      <UserDefElement iecname="StepGiris11" type="T_BOOL" byteoffset="14" vartype="VAR_INPUT" />
+      <UserDefElement iecname="StepGiris12" type="T_BOOL" byteoffset="15" vartype="VAR_INPUT" />
+      <UserDefElement iecname="StepGiris13" type="T_BOOL" byteoffset="16" vartype="VAR_INPUT" />
+      <UserDefElement iecname="StepGiris14" type="T_BOOL" byteoffset="17" vartype="VAR_INPUT" />
+      <UserDefElement iecname="StepGiris15" type="T_BOOL" byteoffset="18" vartype="VAR_INPUT" />
+      <UserDefElement iecname="StepGiris16" type="T_BOOL" byteoffset="19" vartype="VAR_INPUT" />
+      <UserDefElement iecname="StepGiris17" type="T_BOOL" byteoffset="20" vartype="VAR_INPUT" />
+      <UserDefElement iecname="StepGiris18" type="T_BOOL" byteoffset="21" vartype="VAR_INPUT" />
+      <UserDefElement iecname="StepGiris19" type="T_BOOL" byteoffset="22" vartype="VAR_INPUT" />
+      <UserDefElement iecname="StepGiris20" type="T_BOOL" byteoffset="23" vartype="VAR_INPUT" />
+      <UserDefElement iecname="StepGiris21" type="T_BOOL" byteoffset="24" vartype="VAR_INPUT" />
+      <UserDefElement iecname="StepGiris22" type="T_BOOL" byteoffset="25" vartype="VAR_INPUT" />
+      <UserDefElement iecname="StepGiris23" type="T_BOOL" byteoffset="26" vartype="VAR_INPUT" />
+      <UserDefElement iecname="StepGiris24" type="T_BOOL" byteoffset="27" vartype="VAR_INPUT" />
+      <UserDefElement iecname="StepGiris25" type="T_BOOL" byteoffset="28" vartype="VAR_INPUT" />
+      <UserDefElement iecname="StepGiris26" type="T_BOOL" byteoffset="29" vartype="VAR_INPUT" />
+      <UserDefElement iecname="RUN" type="T_BOOL" byteoffset="30" vartype="VAR_INPUT" />
+      <UserDefElement iecname="StepleriSifirla" type="T_BOOL" byteoffset="31" vartype="VAR_INPUT" />
+      <UserDefElement iecname="TamOto" type="T_BOOL" byteoffset="32" vartype="VAR_INPUT" />
+      <UserDefElement iecname="StepByStep" type="T_BOOL" byteoffset="33" vartype="VAR_INPUT" />
+      <UserDefElement iecname="StepPuls" type="T_BOOL" byteoffset="34" vartype="VAR_INPUT" />
+      <UserDefElement iecname="StepSayisi" type="T_INT" byteoffset="36" vartype="VAR_INPUT" />
+      <UserDefElement iecname="StepCikis1" type="T_BOOL" byteoffset="38" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis2" type="T_BOOL" byteoffset="39" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis3" type="T_BOOL" byteoffset="40" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis4" type="T_BOOL" byteoffset="41" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis5" type="T_BOOL" byteoffset="42" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis6" type="T_BOOL" byteoffset="43" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis7" type="T_BOOL" byteoffset="44" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis8" type="T_BOOL" byteoffset="45" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis9" type="T_BOOL" byteoffset="46" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis10" type="T_BOOL" byteoffset="47" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis11" type="T_BOOL" byteoffset="48" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis12" type="T_BOOL" byteoffset="49" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis13" type="T_BOOL" byteoffset="50" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis14" type="T_BOOL" byteoffset="51" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis15" type="T_BOOL" byteoffset="52" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis16" type="T_BOOL" byteoffset="53" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis17" type="T_BOOL" byteoffset="54" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis18" type="T_BOOL" byteoffset="55" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis19" type="T_BOOL" byteoffset="56" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis20" type="T_BOOL" byteoffset="57" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis21" type="T_BOOL" byteoffset="58" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis22" type="T_BOOL" byteoffset="59" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis23" type="T_BOOL" byteoffset="60" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis24" type="T_BOOL" byteoffset="61" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis25" type="T_BOOL" byteoffset="62" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="StepCikis26" type="T_BOOL" byteoffset="63" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="step" type="T_INT" byteoffset="64" vartype="VAR" />
+      <UserDefElement iecname="StepPulsTrig" type="T_F_TRIG" byteoffset="68" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_ADDRESS" size="16" nativesize="16" typeclass="Userdef" pouclass="STRUCTURE" iecname="ADDRESS">
+      <UserDefElement iecname="_Type" type="T_BYTE" byteoffset="0" vartype="VAR" />
+      <UserDefElement iecname="_CliID" type="T_BYTE" byteoffset="1" vartype="VAR" />
+      <UserDefElement iecname="Rack" type="T_BYTE" byteoffset="2" vartype="VAR" />
+      <UserDefElement iecname="Module" type="T_BYTE" byteoffset="3" vartype="VAR" />
+      <UserDefElement iecname="Link" type="T_LinkNumber" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="_ProtId" type="T_BYTE" byteoffset="5" vartype="VAR" />
+      <UserDefElement iecname="AddrLen" type="T_BYTE" byteoffset="6" vartype="VAR" />
+      <UserDefElement iecname="UnitId" type="T_BYTE" byteoffset="7" vartype="VAR" />
+      <UserDefElement iecname="AddrExt" type="T_ADDR_EXT" byteoffset="8" vartype="VAR" />
+    </TypeUserDef>
+    <TypeUserDef name="T_FB_BaseMotion" size="41" nativesize="32" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="FB_BaseMotion">
+      <UserDefElement iecname="xExecuteCurrent" type="T_BOOL" byteoffset="4" vartype="VAR" />
+      <UserDefElement iecname="xExecuteLast" type="T_BOOL" byteoffset="5" vartype="VAR" />
+      <UserDefElement iecname="uiState" type="T_UINT" byteoffset="6" vartype="VAR" />
+      <UserDefElement iecname="udiMotionHandle" type="T_UDINT" byteoffset="8" vartype="VAR" />
+      <UserDefElement iecname="ifMotionCommand" type="T_TYPE_REFERENCE" byteoffset="12" vartype="VAR" />
+      <UserDefElement iecname="etJobStateActual" type="T_ET_JobState" byteoffset="16" vartype="VAR" />
+      <UserDefElement iecname="etJobStatePrevious" type="T_ET_JobState" byteoffset="20" vartype="VAR" />
+      <UserDefElement iecname="xErrorBuffer" type="T_BOOL" byteoffset="24" vartype="VAR" />
+      <UserDefElement iecname="etMoinResultBuffer" type="T_ET_Result" byteoffset="28" vartype="VAR" />
+      <UserDefElement iecname="etBufferMode" type="T_MC_Buffer_Mode" byteoffset="32" vartype="VAR" propertytype="call" />
+      <UserDefElement iecname="ifAxis" type="T_TYPE_REFERENCE_1" byteoffset="36" vartype="VAR" propertytype="call" />
+      <UserDefElement iecname="xExecute" type="T_BOOL" byteoffset="40" vartype="VAR" propertytype="call" />
+    </TypeUserDef>
+    <TypeSimple name="T_REFERENCE_TO_ADDRESS_REF" size="16" swapsize="0" typeclass="Reference" iecname="REFERENCE TO ADDRESS_REF" basetype="T_ADDRESS" />
+    <TypeUserDef name="T_ADDM" size="105" nativesize="96" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="ADDM">
+      <UserDefElement iecname="AddrTable" type="T_ADDRESS" byteoffset="4" vartype="VAR_IN_OUT" />
+      <UserDefElement iecname="Execute" type="T_BOOL" byteoffset="20" vartype="VAR_INPUT" />
+      <UserDefElement iecname="Addr" type="T_STRING" byteoffset="21" vartype="VAR_INPUT" />
+      <UserDefElement iecname="Done" type="T_BOOL" byteoffset="102" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="Error" type="T_BOOL" byteoffset="103" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="CommError" type="T_BYTE" byteoffset="104" vartype="VAR_OUTPUT" />
+    </TypeUserDef>
+    <TypeUserDef name="T_BASE" size="548" nativesize="548" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="BASE">
+      <UserDefElement iecname="Execute" type="T_BOOL" byteoffset="4" vartype="VAR_INPUT" />
+      <UserDefElement iecname="Abort" type="T_BOOL" byteoffset="5" vartype="VAR_INPUT" />
+      <UserDefElement iecname="Addr" type="T_ADDRESS" byteoffset="8" vartype="VAR_INPUT" />
+      <UserDefElement iecname="Timeout" type="T_WORD" byteoffset="24" vartype="VAR_INPUT" />
+      <UserDefElement iecname="Done" type="T_BOOL" byteoffset="26" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="Busy" type="T_BOOL" byteoffset="27" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="Aborted" type="T_BOOL" byteoffset="28" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="Error" type="T_BOOL" byteoffset="29" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="CommError" type="T_BYTE" byteoffset="30" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="OperError" type="T_DWORD" byteoffset="32" vartype="VAR_OUTPUT" />
+    </TypeUserDef>
+    <TypeUserDef name="T_MC_MoveAbsolute" size="144" nativesize="144" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="MC_MoveAbsolute" basetype="T_FB_BaseMotion">
+      <UserDefElement iecname="xExecuteCurrent" type="T_BOOL" byteoffset="4" vartype="VAR" inherited_from="T_FB_BaseMotion" />
+      <UserDefElement iecname="xExecuteLast" type="T_BOOL" byteoffset="5" vartype="VAR" inherited_from="T_FB_BaseMotion" />
+      <UserDefElement iecname="uiState" type="T_UINT" byteoffset="6" vartype="VAR" inherited_from="T_FB_BaseMotion" />
+      <UserDefElement iecname="udiMotionHandle" type="T_UDINT" byteoffset="8" vartype="VAR" inherited_from="T_FB_BaseMotion" />
+      <UserDefElement iecname="ifMotionCommand" type="T_TYPE_REFERENCE" byteoffset="12" vartype="VAR" inherited_from="T_FB_BaseMotion" />
+      <UserDefElement iecname="etJobStateActual" type="T_ET_JobState" byteoffset="16" vartype="VAR" inherited_from="T_FB_BaseMotion" />
+      <UserDefElement iecname="etJobStatePrevious" type="T_ET_JobState" byteoffset="20" vartype="VAR" inherited_from="T_FB_BaseMotion" />
+      <UserDefElement iecname="xErrorBuffer" type="T_BOOL" byteoffset="24" vartype="VAR" inherited_from="T_FB_BaseMotion" />
+      <UserDefElement iecname="etMoinResultBuffer" type="T_ET_Result" byteoffset="28" vartype="VAR" inherited_from="T_FB_BaseMotion" />
+      <UserDefElement iecname="Axis" type="T_Axis_Ref" byteoffset="32" vartype="VAR_INPUT" />
+      <UserDefElement iecname="Execute" type="T_BOOL" byteoffset="36" vartype="VAR_INPUT" />
+      <UserDefElement iecname="Position" type="T_LREAL" byteoffset="40" vartype="VAR_INPUT" />
+      <UserDefElement iecname="Velocity" type="T_LREAL" byteoffset="48" vartype="VAR_INPUT" />
+      <UserDefElement iecname="Acceleration" type="T_LREAL" byteoffset="56" vartype="VAR_INPUT" />
+      <UserDefElement iecname="Deceleration" type="T_LREAL" byteoffset="64" vartype="VAR_INPUT" />
+      <UserDefElement iecname="Jerk" type="T_LREAL" byteoffset="72" vartype="VAR_INPUT" />
+      <UserDefElement iecname="Direction" type="T_MC_Direction" byteoffset="80" vartype="VAR_INPUT" />
+      <UserDefElement iecname="BufferMode" type="T_MC_Buffer_Mode" byteoffset="84" vartype="VAR_INPUT" />
+      <UserDefElement iecname="Done" type="T_BOOL" byteoffset="86" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="Busy" type="T_BOOL" byteoffset="87" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="Active" type="T_BOOL" byteoffset="88" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="CommandAborted" type="T_BOOL" byteoffset="89" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="Error" type="T_BOOL" byteoffset="90" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="ErrorId" type="T_ET_Result_1" byteoffset="92" vartype="VAR_OUTPUT" />
+      <UserDefElement iecname="etBufferMode" type="T_MC_Buffer_Mode" byteoffset="96" vartype="VAR" inherited_from="T_FB_BaseMotion" propertytype="call" />
+      <UserDefElement iecname="ifAxis" type="T_TYPE_REFERENCE_1" byteoffset="100" vartype="VAR" inherited_from="T_FB_BaseMotion" propertytype="call" />
+      <UserDefElement iecname="xExecute" type="T_BOOL" byteoffset="104" vartype="VAR" inherited_from="T_FB_BaseMotion" propertytype="call" />
+    </TypeUserDef>
+    <TypeUserDef name="T_READ_VAR" size="568" nativesize="568" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="READ_VAR" basetype="T_BASE">
+      <UserDefElement iecname="Execute" type="T_BOOL" byteoffset="4" vartype="VAR_INPUT" inherited_from="T_BASE" />
+      <UserDefElement iecname="Abort" type="T_BOOL" byteoffset="5" vartype="VAR_INPUT" inherited_from="T_BASE" />
+      <UserDefElement iecname="Addr" type="T_ADDRESS" byteoffset="8" vartype="VAR_INPUT" inherited_from="T_BASE" />
+      <UserDefElement iecname="Timeout" type="T_WORD" byteoffset="24" vartype="VAR_INPUT" inherited_from="T_BASE" />
+      <UserDefElement iecname="Done" type="T_BOOL" byteoffset="26" vartype="VAR_OUTPUT" inherited_from="T_BASE" />
+      <UserDefElement iecname="Busy" type="T_BOOL" byteoffset="27" vartype="VAR_OUTPUT" inherited_from="T_BASE" />
+      <UserDefElement iecname="Aborted" type="T_BOOL" byteoffset="28" vartype="VAR_OUTPUT" inherited_from="T_BASE" />
+      <UserDefElement iecname="Error" type="T_BOOL" byteoffset="29" vartype="VAR_OUTPUT" inherited_from="T_BASE" />
+      <UserDefElement iecname="CommError" type="T_BYTE" byteoffset="30" vartype="VAR_OUTPUT" inherited_from="T_BASE" />
+      <UserDefElement iecname="OperError" type="T_DWORD" byteoffset="32" vartype="VAR_OUTPUT" inherited_from="T_BASE" />
+      <UserDefElement iecname="ObjType" type="T_ObjectType" byteoffset="548" vartype="VAR_INPUT" />
+      <UserDefElement iecname="FirstObj" type="T_DINT" byteoffset="552" vartype="VAR_INPUT" />
+      <UserDefElement iecname="Quantity" type="T_UINT" byteoffset="556" vartype="VAR_INPUT" />
+      <UserDefElement iecname="Buffer" type="T_POINTER_TO_BYTE" byteoffset="560" vartype="VAR_INPUT" />
+    </TypeUserDef>
+    <TypeSimple name="T_TYPE_REFERENCE" size="4" swapsize="4" typeclass="Userdef" iecname="TYPE_REFERENCE" />
+    <TypeSimple name="T_TYPE_REFERENCE_1" size="4" swapsize="4" typeclass="Userdef" iecname="TYPE_REFERENCE" />
+  </TypeList>
+  <NodeList>
+    <Node name="Application">
+      <Node name="ALARM">
+        <Node name="AcilStopActive" type="T_BOOL" access="ReadWrite" />
+        <Node name="AlarmAnakolTM7" type="T_BOOL" access="ReadWrite" />
+        <Node name="AlarmEtiketTM7" type="T_BOOL" access="ReadWrite" />
+        <Node name="AlarmValfTM7" type="T_BOOL" access="ReadWrite" />
+        <Node name="AnakolFreniAcik" type="T_BOOL" access="ReadWrite" />
+        <Node name="AnasrvDur" type="T_BOOL" access="ReadWrite" />
+        <Node name="AnaSrvEvdeDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="AnaSrvHazirDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="bas_hata_ana_geride" type="T_BOOL" access="ReadWrite" />
+        <Node name="bas_hata_ana_kol_kulp_geride" type="T_BOOL" access="ReadWrite" />
+        <Node name="bas_hata_ana_kulp_trans_asagi" type="T_BOOL" access="ReadWrite" />
+        <Node name="bas_hata_ana_kulp_trans_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bas_hata_dizme_geride" type="T_BOOL" access="ReadWrite" />
+        <Node name="bas_hata_dizme_urunde" type="T_BOOL" access="ReadWrite" />
+        <Node name="bas_hata_dizme_yanas_disarida" type="T_BOOL" access="ReadWrite" />
+        <Node name="bas_hata_dizme_yukarida" type="T_BOOL" access="ReadWrite" />
+        <Node name="bas_hata_DonerTabla_0" type="T_BOOL" access="ReadWrite" />
+        <Node name="bas_hata_dummy_iceride" type="T_BOOL" access="ReadWrite" />
+        <Node name="bas_hata_dzm_kulp_trans_yukari" type="T_BOOL" access="ReadWrite" />
+        <Node name="bas_hata_etk_yanas_disarida" type="T_BOOL" access="ReadWrite" />
+        <Node name="bas_hata_kulp_cakma_disari" type="T_BOOL" access="ReadWrite" />
+        <Node name="bas_hata_kulp_trans_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bas_hata_kulp_trans_yukari" type="T_BOOL" access="ReadWrite" />
+        <Node name="bas_hata_sarmal_etk_geride" type="T_BOOL" access="ReadWrite" />
+        <Node name="bas_hata_sarmal_etk_magazinde" type="T_BOOL" access="ReadWrite" />
+        <Node name="bas_hata_taban_etiket_magazinde" type="T_BOOL" access="ReadWrite" />
+        <Node name="bas_hata_urun_iceride" type="T_BOOL" access="ReadWrite" />
+        <Node name="bas_hata_urun_trans_almada" type="T_BOOL" access="ReadWrite" />
+        <Node name="bas_hata_urunTasiyici_Almada" type="T_BOOL" access="ReadWrite" />
+        <Node name="bas_hata_urunTasiyici_geride" type="T_BOOL" access="ReadWrite" />
+        <Node name="bas_hata_urunTasiyiciYukarida" type="T_BOOL" access="ReadWrite" />
+        <Node name="bas_hata_X_sifir" type="T_BOOL" access="ReadWrite" />
+        <Node name="bas_hata_Y_sifir" type="T_BOOL" access="ReadWrite" />
+        <Node name="bas_hata_Z_yukarida" type="T_BOOL" access="ReadWrite" />
+        <Node name="bas_ht_DnrTblSbtlmAsgda" type="T_BOOL" access="ReadWrite" />
+        <Node name="baslangic_konum_hatasi" type="T_BOOL" access="ReadWrite" />
+        <Node name="bFotoGecikti" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme2_durdur" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme2_konveyor_engeli" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_asagi_gidebilir" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_durdur" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_konveyor_engeli" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizmefreniacik" type="T_BOOL" access="ReadWrite" />
+        <Node name="DizmeKapiAlarmActive" type="T_BOOL" access="ReadWrite" />
+        <Node name="DizmeSrv2EvdeDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="DizmeSrv2HazirDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="DizmeSrvEvdeDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="DizmeSrvHazirDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="DonerTablaSrvEvdeDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="DonerTablaSrvHazirDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummy_dinamik_poz_hata" type="T_BOOL" access="ReadWrite" />
+        <Node name="DummyDonSrvEvdeDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="DummyDonSrvHazirDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="DummySrv2EvdeDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="DummySrv2HazirDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="DummySrvEvdeDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="DummySrvHazirDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="EtiketFreniAcik" type="T_BOOL" access="ReadWrite" />
+        <Node name="EtiketSrv2EvdeDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="EtiketSrv2HazirDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="EtiketSrvEvdeDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="EtiketSrvHazirDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="faz_sirasi_hata" type="T_BOOL" access="ReadWrite" />
+        <Node name="GuvenlikDevresiHatasi" type="T_BOOL" access="ReadWrite" />
+        <Node name="HavaAlarmActive" type="T_BOOL" access="ReadWrite" />
+        <Node name="IMMAcilStopActive" type="T_BOOL" access="ReadWrite" />
+        <Node name="immKapiAlarmActive" type="T_BOOL" access="ReadWrite" />
+        <Node name="immOtomatikUyarisi" type="T_BOOL" access="ReadWrite" />
+        <Node name="kamera_hata" type="T_BOOL" access="ReadWrite" />
+        <Node name="kamera_hazir" type="T_BOOL" access="ReadWrite" />
+        <Node name="konveyor_dolu" type="T_BOOL" access="ReadWrite" />
+        <Node name="konveyorde_koli_yok" type="T_BOOL" access="ReadWrite" />
+        <Node name="konveyorSrvEvdeDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="KonveyorSrvHazirDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="kulp_alma_hatasi" type="T_BOOL" access="ReadWrite" />
+        <Node name="KulpKapiAlarmActive" type="T_BOOL" access="ReadWrite" />
+        <Node name="MagazinKapiAlarmActive" type="T_BOOL" access="ReadWrite" />
+        <Node name="PistonlarReferansta" type="T_BOOL" access="ReadWrite" />
+        <Node name="RefTeknikServisUyarisi" type="T_BOOL" access="ReadWrite" />
+        <Node name="Robot_Baslangic_Konumunda" type="T_BOOL" access="ReadWrite" />
+        <Node name="RobotCalisabilirModda" type="T_BOOL" access="ReadWrite" />
+        <Node name="RobotCalisiyorUyarisi" type="T_BOOL" access="ReadWrite" />
+        <Node name="RobotCalismaModuUyarisi" type="T_BOOL" access="ReadWrite" />
+        <Node name="RobotKapi1AlarmActive" type="T_BOOL" access="ReadWrite" />
+        <Node name="RobotKapi2AlarmActive" type="T_BOOL" access="ReadWrite" />
+        <Node name="RobotKapi3AlarmActive" type="T_BOOL" access="ReadWrite" />
+        <Node name="RobotKapiAlarmActive" type="T_BOOL" access="ReadWrite" />
+        <Node name="sAnaSrvAxisError" type="T_STRING" access="ReadWrite" />
+        <Node name="sAnaSrvCozum" type="T_STRING" access="ReadWrite" />
+        <Node name="sAnaSrvHata" type="T_STRING" access="ReadWrite" />
+        <Node name="sAnaSrvKod" type="T_STRING" access="ReadWrite" />
+        <Node name="sAnaSrvNeden" type="T_STRING" access="ReadWrite" />
+        <Node name="sarmal_etk_azaliyor" type="T_BOOL" access="ReadWrite" />
+        <Node name="SarmalEtiketBitti" type="T_BOOL" access="ReadWrite" />
+        <Node name="sDizmeSrvAxisError" type="T_STRING" access="ReadWrite" />
+        <Node name="sDizmeSrvCozum" type="T_STRING" access="ReadWrite" />
+        <Node name="sDizmeSrvHata" type="T_STRING" access="ReadWrite" />
+        <Node name="sDizmeSrvKod" type="T_STRING" access="ReadWrite" />
+        <Node name="sDizmeSrvNeden" type="T_STRING" access="ReadWrite" />
+        <Node name="sDonerTablaSrvAxisError" type="T_STRING" access="ReadWrite" />
+        <Node name="sDonerTablaSrvCozum" type="T_STRING" access="ReadWrite" />
+        <Node name="sDonerTablaSrvHata" type="T_STRING" access="ReadWrite" />
+        <Node name="sDonerTablaSrvKod" type="T_STRING" access="ReadWrite" />
+        <Node name="sDonerTablaSrvNeden" type="T_STRING" access="ReadWrite" />
+        <Node name="sDummyDonSrvAxisError" type="T_STRING" access="ReadWrite" />
+        <Node name="sDummyDonSrvCozum" type="T_STRING" access="ReadWrite" />
+        <Node name="sDummyDonSrvHata" type="T_STRING" access="ReadWrite" />
+        <Node name="sDummyDonSrvKod" type="T_STRING" access="ReadWrite" />
+        <Node name="sDummyDonSrvNeden" type="T_STRING" access="ReadWrite" />
+        <Node name="sDummySrvAxisError" type="T_STRING" access="ReadWrite" />
+        <Node name="sDummySrvCozum" type="T_STRING" access="ReadWrite" />
+        <Node name="sDummySrvHata" type="T_STRING" access="ReadWrite" />
+        <Node name="sDummySrvKod" type="T_STRING" access="ReadWrite" />
+        <Node name="sDummySrvNeden" type="T_STRING" access="ReadWrite" />
+        <Node name="sens_hata_ana_kulp_trans_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="sens_hata_ana_kulp_trans_yukari" type="T_BOOL" access="ReadWrite" />
+        <Node name="sens_hata_anakol" type="T_BOOL" access="ReadWrite" />
+        <Node name="sens_hata_disi_kalip_urun_var" type="T_BOOL" access="ReadWrite" />
+        <Node name="sens_hata_dizme_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="sens_hata_dizme_urunde" type="T_BOOL" access="ReadWrite" />
+        <Node name="sens_hata_dizme_yanas_iceri" type="T_BOOL" access="ReadWrite" />
+        <Node name="sens_hata_dummy_iceride" type="T_BOOL" access="ReadWrite" />
+        <Node name="sens_hata_dzm_kulp_trans_yukari" type="T_BOOL" access="ReadWrite" />
+        <Node name="sens_hata_erkek_kalip_urun_var" type="T_BOOL" access="ReadWrite" />
+        <Node name="sens_hata_guc_rolesi" type="T_BOOL" access="ReadWrite" />
+        <Node name="sens_hata_guv_alan_sens_off" type="T_BOOL" access="ReadWrite" />
+        <Node name="sens_hata_guv_alan_sens_on" type="T_BOOL" access="ReadWrite" />
+        <Node name="sens_hata_imm_kalip_acik" type="T_BOOL" access="ReadWrite" />
+        <Node name="sens_hata_kulp_iceride" type="T_BOOL" access="ReadWrite" />
+        <Node name="sens_hata_kulp_trans_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="sens_hata_kulp_trans_yukari" type="T_BOOL" access="ReadWrite" />
+        <Node name="sens_hata_robot_merkez_sens" type="T_BOOL" access="ReadWrite" />
+        <Node name="sens_hata_sarmal_etk_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="sens_hata_sarmal_etk_magazinde" type="T_BOOL" access="ReadWrite" />
+        <Node name="sens_hata_sarmal_etk_yanas" type="T_BOOL" access="ReadWrite" />
+        <Node name="sens_hata_taban_etk_magazinde" type="T_BOOL" access="ReadWrite" />
+        <Node name="sens_hata_urun_alma" type="T_BOOL" access="ReadWrite" />
+        <Node name="sens_hata_urun_iceri" type="T_BOOL" access="ReadWrite" />
+        <Node name="sens_hata_urun_tasiyici_almada" type="T_BOOL" access="ReadWrite" />
+        <Node name="sens_hata_urun_tasiyici_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="sens_hata_urun_trans_alamda" type="T_BOOL" access="ReadWrite" />
+        <Node name="sens_hata_urun_trans_almada" type="T_BOOL" access="ReadWrite" />
+        <Node name="sens_hata_urun_vkm" type="T_BOOL" access="ReadWrite" />
+        <Node name="Sensor_hatasi" type="T_BOOL" access="ReadWrite" />
+        <Node name="servis1" type="T_BOOL" access="ReadWrite" />
+        <Node name="servis2" type="T_BOOL" access="ReadWrite" />
+        <Node name="ServoKonumHatasi" type="T_BOOL" access="ReadWrite" />
+        <Node name="servolar_yerinde" type="T_BOOL" access="ReadWrite" />
+        <Node name="sEtiketSrvAxisError" type="T_STRING" access="ReadWrite" />
+        <Node name="sEtiketSrvCozum" type="T_STRING" access="ReadWrite" />
+        <Node name="sEtiketSrvHata" type="T_STRING" access="ReadWrite" />
+        <Node name="sEtiketSrvKod" type="T_STRING" access="ReadWrite" />
+        <Node name="sEtiketSrvNeden" type="T_STRING" access="ReadWrite" />
+        <Node name="sKonveyorSrvAxisError" type="T_STRING" access="ReadWrite" />
+        <Node name="sKonveyorSrvCozum" type="T_STRING" access="ReadWrite" />
+        <Node name="sKonveyorSrvHata" type="T_STRING" access="ReadWrite" />
+        <Node name="sKonveyorSrvKod" type="T_STRING" access="ReadWrite" />
+        <Node name="sKonveyorSrvNeden" type="T_STRING" access="ReadWrite" />
+        <Node name="surucu_hatasi" type="T_BOOL" access="ReadWrite" />
+        <Node name="suruculer_hazir_degil" type="T_BOOL" access="ReadWrite" />
+        <Node name="sUrunTasiyiciSrvAxisError" type="T_STRING" access="ReadWrite" />
+        <Node name="sUrunTasiyiciSrvCozum" type="T_STRING" access="ReadWrite" />
+        <Node name="sUrunTasiyiciSrvHata" type="T_STRING" access="ReadWrite" />
+        <Node name="sUrunTasiyiciSrvKod" type="T_STRING" access="ReadWrite" />
+        <Node name="sUrunTasiyiciSrvNeden" type="T_STRING" access="ReadWrite" />
+        <Node name="sXSrvAxisError" type="T_STRING" access="ReadWrite" />
+        <Node name="sXSrvCozum" type="T_STRING" access="ReadWrite" />
+        <Node name="sXSrvNeden" type="T_STRING" access="ReadWrite" />
+        <Node name="sxSrvSrvHata" type="T_STRING" access="ReadWrite" />
+        <Node name="sXSrvSrvKod" type="T_STRING" access="ReadWrite" />
+        <Node name="sYSrvAxisError" type="T_STRING" access="ReadWrite" />
+        <Node name="sYSrvCozum" type="T_STRING" access="ReadWrite" />
+        <Node name="sYSrvNeden" type="T_STRING" access="ReadWrite" />
+        <Node name="sYSrvSrvHata" type="T_STRING" access="ReadWrite" />
+        <Node name="sYSrvSrvKod" type="T_STRING" access="ReadWrite" />
+        <Node name="sZSrvAxisError" type="T_STRING" access="ReadWrite" />
+        <Node name="sZSrvCozum" type="T_STRING" access="ReadWrite" />
+        <Node name="sZSrvNeden" type="T_STRING" access="ReadWrite" />
+        <Node name="sZSrvSrvHata" type="T_STRING" access="ReadWrite" />
+        <Node name="sZSrvSrvKod" type="T_STRING" access="ReadWrite" />
+        <Node name="taban_etk_azaliyor" type="T_BOOL" access="ReadWrite" />
+        <Node name="TabanEtiketBitti" type="T_BOOL" access="ReadWrite" />
+        <Node name="timeout_alarm" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_ana_geride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_ana_ileride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_ana_kulp_geride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_ana_kulp_ileride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_ana_kulp_trans_asagi" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_ana_kulp_trans_geride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_ana_kulp_trans_ileride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_ana_kulp_trans_tutucu_kapali" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_ana_kulp_trans_yukari" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_ayirici1_geride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_ayirici1_ileride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_ayirici2_geride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_ayirici2_ileride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_ayirici3_geride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_ayirici3_ileride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_ayirici4_geride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_ayirici4_ileride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_ayirici5_geride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_ayirici5_ileride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_ayirici6_geride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_ayirici6_ileride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_ayirici7_geride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_ayirici7_ileride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_ayiricida_urun_var" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme1_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme1_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme2_ayiriciya" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme2_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme2_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme2_ileride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme2_konveyore" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme2_urunde" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme2_yukarida" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme3_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme3_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme4_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme4_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme5_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme5_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme6_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme6_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme7_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme7_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme8_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme8_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme_hatali_urun" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme_konveyore" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme_kulp_trans_asagida" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme_kulp_trans_yukari" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme_reflektor" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme_urune" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme_vkm_hatasi" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme_vkm_hatasi2" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme_yanas_disarida" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme_yanas_iceri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dizme_yukarida" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_DonerTabla_Sbtlm_asagida" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_DonerTabla_Sbtlm_yukarida" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dummy_disari" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dummy_don_180de" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dummy_don_kalipta" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dummy_iceride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dummy_taban_vkm_hatasi" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dummy_vkm_hatasi" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_Dummydon_Ref_hatasi" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_dzm_klp_trans_tutucu_kapali" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_etiket_azaldi" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_etk_yanas_disarida" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_etk_yanas_iceride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_firca_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_firca_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_imm_itici_geride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_kalip_acik" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_kalip_acik_ex" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_kamera_devrede" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_konveyor_dolu" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_konveyor_itici_geride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_konveyor_itici_ileride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_konveyor_piston1_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_konveyor_piston1_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_konveyor_piston2_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_konveyor_piston2_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_konveyor_piston3_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_konveyor_piston3_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_kulp_alani_guv" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_kulp_asagida" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_kulp_beklemede" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_kulp_cakma_disari" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_kulp_cakma_iceri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_kulp_disarida" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_kulp_geride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_kulp_iceride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_kulp_ileride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_kulp_ortada" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_kulp_plaka_dizmede" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_kulp_plaka_geride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_kulp_plaka_ileride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_kulp_plaka_robotta" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_kulp_trans_asagida" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_kulp_trans_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_kulp_trans_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_kulp_trans_yukarida" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_kulp_yukarida" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_sarmal_etk_dummyde" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_sarmal_etk_geride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_sarmal_etk_ileride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_sarmal_etk_magazinde" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_taban_etk_dummye" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_taban_etk_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_taban_etk_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_taban_etk_magazine" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_tank_vkm" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_tasiyici_almaya" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_tasiyici_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_tasiyici_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_tasiyici_vermeye" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_tasiyici_vkm_sens" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_ufleme_reflector" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_urun_almada" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_urun_disari" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_urun_dusmedi" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_urun_iceri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_urun_sikistirma_geride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_urun_sikistirma_ileride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_urun_srv2_iceride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_urun_srv_iceride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_urun_tasiyici_almada" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_urun_tasiyici_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_urun_tasiyici_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_urun_tasiyici_vermede" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_urun_tasiyici_yukarida" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_urun_trans_almaya" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_urun_trans_asagida" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_urun_trans_geride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_urun_trans_iceri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_urun_trans_ileride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_urun_trans_vermeye" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_urun_trans_vkm_hatasi" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_urun_trans_yanas_disari" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_urun_trans_yanas_iceri" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_urun_trans_yukari" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_urun_yanastir_disarida" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_urun_yanastir_iceride" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_X_urun_almada" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_Y_urun_almada" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_Y_urun_vermede" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_Z_urun_almada" type="T_BOOL" access="ReadWrite" />
+        <Node name="to_Z_Yukarida" type="T_BOOL" access="ReadWrite" />
+        <Node name="uretim_hatasi" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_alma_hatasi" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_tasiyici_durdur" type="T_BOOL" access="ReadWrite" />
+        <Node name="UrunSrv2EvdeDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="UrunSrv2HazirDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="UrunSrvEvdeDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="UrunSrvHazirDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="urunTasiyiciFrenAcik" type="T_BOOL" access="ReadWrite" />
+        <Node name="UrunTasiyiciSrvHazirDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="UrunTasyiciSrvEvdeDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="UrunTransSrvEvdeDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="UrunTransSrvHazirDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="XSrvEvdeDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="XSrvHazirDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="YSrvEvdeDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="YSrvHazirDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="Z_srv_Durdur" type="T_BOOL" access="ReadWrite" />
+        <Node name="Z_urun_alamadi" type="T_BOOL" access="ReadWrite" />
+        <Node name="ZSrvEvdeDegil" type="T_BOOL" access="ReadWrite" />
+        <Node name="ZSrvFrenAcik" type="T_BOOL" access="ReadWrite" />
+        <Node name="ZSrvHazirDegil" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="BUTONLAR">
+        <Node name="bt_ana_kulp_trans_asagi" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_ana_kulp_trans_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_ana_kulp_trans_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_ana_kulp_trans_yukari" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_ana_kulp_trns_tutucu_ac" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_ana_kulp_trns_tutucu_birak" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_ana_kulp_trns_tutucu_kapa" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_ana_srv_jog_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_ana_srv_jog_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_anakol_kulp_disari" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_anakol_kulp_tutucu" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme1_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme1_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme1_vkm" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme2_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme2_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme2_vkm" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme3_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme3_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme3_vkm" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme4_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme4_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme4_vkm" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme5_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme5_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme5_vkm" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme6_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme6_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme6_vkm" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme7_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme7_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme7_vkm" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme8_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme8_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme8_vkm" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme_don" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme_konveyore" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme_kulp_Sabitleme" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme_kulp_trans_asagi" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme_kulp_trans_yukari" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme_srv_jog_asagi" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme_srv_jog_yukari" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme_ufleme" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme_urune" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme_vkm" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme_vkm2" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme_yanas_disari" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme_yanas_iceri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_DonerTabla_jog_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_DonerTabla_jog_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dummy_disari" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dummy_sarmal_vkm" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dummy_sarmal_vkm2" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dummy_srv_jog_disari" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dummy_srv_jog_iceri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dummy_ufleme" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dummydon_srv_jog_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dummydon_srv_jog_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dzm_kulp_tran_tutucu_ac" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dzm_kulp_tran_tutucu_kapa" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_etiket_srv_jog_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_etiket_srv_jog_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_firca_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_kapak_calisma" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_konveyor_piston1" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_konveyor_piston2" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_konveyor_piston3" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_Konveyor_srv_jog_asagi" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_Konveyor_srv_jog_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_Konveyor_srv_jog_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_kulp_asagi_dis" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_kulp_disari" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_kulp_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_kulp_iceri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_kulp_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_kulp_yukari" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_reset" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_sarmal_etk_dummye" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_sarmal_etk_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_sarmal_etk_magazine" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_sarmal_etk_ufleme" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_sarmal_etk_vkm" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_sarmal_etk_vkm2" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_sarmal_etk_yanas_disari" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_sarmal_etk_yanas_iceri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_sayici_reset" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_tablaSabitleme_asagi" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_tablaSabitleme_yukari" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_teknik_servis" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_time_set" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_urun_disari" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_urun_iceri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_urun_tasiyici_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_urun_tasiyici_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_urun_tasiyici_konveyore" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_urun_tasiyici_ufleme" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_urun_tasiyici_urune" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_urun_tasiyici_vkm" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_urun_tasiyici_vkm2" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_urun_trans_almaya" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_urun_trans_ufleme" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_urun_trans_ufleme2" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_urun_trans_ufleme4" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_urun_trans_ufleme6" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_urun_trans_vermeye" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_urun_trans_vkm" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_urun_trans_vkm2" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_urun_trans_vkm4" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_urun_trans_vkm6" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_urun_ufleme" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_urun_vkm" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_UrunTasiyici_srv_jog_asagi" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_UrunTasiyici_srv_jog_yukari" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_valf1_man" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_valf2_man" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_valf3_man" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_valf4_man" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_X_srv_jog_disari" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_X_srv_jog_iceri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_Y_srv_jog_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_Y_srv_jog_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_Z_srv_jog_asagi" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_Z_srv_jog_yukari" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_Z_ufleme" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_Z_vkm" type="T_BOOL" access="ReadWrite" />
+        <Node name="btDevreDisiOp" type="T_BOOL" access="ReadWrite" />
+        <Node name="btDummyTabanVkmOp" type="T_BOOL" access="ReadWrite" />
+        <Node name="btKulpBastir" type="T_BOOL" access="ReadWrite" />
+        <Node name="btManualOp" type="T_BOOL" access="ReadWrite" />
+        <Node name="btOtomatikOp" type="T_BOOL" access="ReadWrite" />
+        <Node name="btSrvAyar" type="T_BOOL" access="ReadWrite" />
+        <Node name="btStepOp" type="T_BOOL" access="ReadWrite" />
+        <Node name="btTabanEtiketDummyeOp" type="T_BOOL" access="ReadWrite" />
+        <Node name="btTabanEtiketMagazineOp" type="T_BOOL" access="ReadWrite" />
+        <Node name="btTabanEtiketVkmOp" type="T_BOOL" access="ReadWrite" />
+        <Node name="DonerTabla_180_Derece_Don" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_hatali" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="GLOBAL">
+        <Node name="actcurrent" type="T_WORD" access="ReadWrite" />
+        <Node name="actspeed" type="T_INT" access="ReadWrite" />
+        <Node name="AlarmOK" type="T_BOOL" access="ReadWrite" />
+        <Node name="ana_geri_dinamik" type="T_BOOL" access="ReadWrite" />
+        <Node name="ana_geri_hiz_ok_dinamik" type="T_BOOL" access="ReadWrite" />
+        <Node name="ana_ileri_hiz_ok_dinamik" type="T_BOOL" access="ReadWrite" />
+        <Node name="ana_kol_kulp_disari_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="ana_kol_kulp_tutucu_tut" type="T_BOOL" access="ReadWrite" />
+        <Node name="ana_kulp_trans_asagi_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="ana_kulp_trans_geri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="ana_kulp_trans_ileri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="ana_kulp_trans_tutucu_birak" type="T_BOOL" access="ReadWrite" />
+        <Node name="ana_kulp_trans_tutucu_tut" type="T_BOOL" access="ReadWrite" />
+        <Node name="ana_kulp_trans_yukari_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="ana_srv_etiket_poza_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="ana_srv_etiket_pozda_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="ana_srv_firca_geri_poza_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="ana_srv_firca_geride_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="ana_srv_firca_ileri_poza_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="ana_srv_firca_ileride_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="ana_srv_geri_gidiyor" type="T_BOOL" access="ReadWrite" />
+        <Node name="ana_srv_geri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="ana_srv_geride_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="ana_srv_haraket_izin" type="T_BOOL" access="ReadWrite" />
+        <Node name="ana_srv_ileri_gidiyor" type="T_BOOL" access="ReadWrite" />
+        <Node name="ana_srv_ileri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="ana_srv_ileride_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="ana_srv_ortada_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="ana_srv_ortaya_gidiyor" type="T_BOOL" access="ReadWrite" />
+        <Node name="ana_srv_ortaya_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="AnaSrvEnableOk" type="T_BOOL" access="ReadWrite" />
+        <Node name="AnaSrvEvde" type="T_BOOL" access="ReadWrite" />
+        <Node name="atilacak_cycle_sayisi" type="T_WORD" access="ReadWrite" />
+        <Node name="atilacak_urun_sayisi" type="T_WORD" access="ReadWrite" />
+        <Node name="bAnaSrvEnable" type="T_BOOL" access="ReadWrite" />
+        <Node name="baslangic_konumuna_topla" type="T_BOOL" access="ReadWrite" />
+        <Node name="Baslangica_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="bDizmeSrvEnable" type="T_BOOL" access="ReadWrite" />
+        <Node name="birinci_cycle_kontrol" type="T_BOOL" access="ReadWrite" />
+        <Node name="bKonveyorSrvEnable" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme_vkm4" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme_yvs_durus_set" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme_yvs_kalkis_set" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dummy_yavas_geri_set" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_hatali_urun_ufleme_robot_side" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_orta_poz_aktif_set" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_teknik_servis_set" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_urun_atma_aktif" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_Z_yvs_durus_set" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_Z_yvs_kalkis_set" type="T_BOOL" access="ReadWrite" />
+        <Node name="bXSrvEnable" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme1_geri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme1_ileri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme1_urun_alabilir" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme1_vkm_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme2_geri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme2_ileri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme2_urun_alabilir" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme2_vkm_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="Dizme2SrvEvde" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme3_geri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme3_ileri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme3_urun_alabilir" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme3_vkm_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme4_geri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme4_ileri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme4_urun_alabilir" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme4_vkm_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme5_geri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme5_ileri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme5_urun_alabilir" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme5_vkm_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme6_geri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme6_ileri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme6_urun_alabilir" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme6_vkm_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme7_geri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme7_ileri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme7_urun_alabilir" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme7_vkm_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme8_geri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme8_ileri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme8_urun_alabilir" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme8_vkm_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_don_basla" type="T_BOOL" access="ReadWrite" />
+        <Node name="Dizme_donme_dinamik" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_geri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_ileri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_konveyorden_yukari_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_konveyorden_yukari_yvs_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_konveyore_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_konveyore_tetik" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_kulp_sabitleme_ileri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_kulp_trans_asagi_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_kulp_trans_tutucu_birak" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_kulp_trans_tutucu_tut" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_kulp_trans_yukari_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_ok_set" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_srv2_bekleme_poza_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_srv2_beklemede_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_srv2_konveyorde_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_srv2_konveyore_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_srv2_urun_al_yukari_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_srv2_urun_almada_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_srv2_urun_almaya_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_srv2_yukari_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_srv2_yukarida_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_srv_2nci_urunu_almaya_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_srv_konveyor_yavas_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_srv_konveyorde_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_srv_konveyore_gidiyor" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_srv_konveyore_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_srv_konveyore_yavas_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_srv_konveyore_yvs_gidiyor" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_srv_konveyore_yvs_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_srv_kulp_cakmadan_yukari_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_srv_kulp_cakmaya_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_srv_urun_almada_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_srv_urun_almadan_yukari_cik" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_srv_urun_almaya_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_srv_yukari_gidiyor" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_srv_yukari_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_srv_yukari_yavas_gidebilir" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_srv_yukari_yavas_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_srv_yukarida_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_srv_yukariya_kalkis_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_trans_yukari_tetik" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_ufleme_ok" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_ufleme_set" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_ufleme_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_ufleme_yapabilirrr" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_urune_donme_dinamik" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_urune_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_urune_git_dinamik" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_vkm2_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_vkm_ok" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_vkm_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_vkm_yapabilir" type="T_BOOL" access="ReadWrite" />
+        <Node name="DizmeCamDevrede" type="T_BOOL" access="ReadWrite" />
+        <Node name="DizmeCamYukariDevrede" type="T_BOOL" access="ReadWrite" />
+        <Node name="DizmeSrvEnableOk" type="T_BOOL" access="ReadWrite" />
+        <Node name="DizmeSrvEvde" type="T_BOOL" access="ReadWrite" />
+        <Node name="DonerTabla_0_Derece_Don" type="T_BOOL" access="ReadWrite" />
+        <Node name="DonerTabla_0_derece_dondu" type="T_BOOL" access="ReadWrite" />
+        <Node name="DonerTabla_0_derece_donndu" type="T_BOOL" access="ReadWrite" />
+        <Node name="DonerTabla_0_derece_donuyor" type="T_BOOL" access="ReadWrite" />
+        <Node name="DonerTabla_0_derece_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="DonerTabla_180_derece_dondu" type="T_BOOL" access="ReadWrite" />
+        <Node name="DonerTabla_180_derece_donndu" type="T_BOOL" access="ReadWrite" />
+        <Node name="DonerTabla_180_derece_donuyor" type="T_BOOL" access="ReadWrite" />
+        <Node name="DonerTabla_180_derece_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="DonerTabla_Sabitleme_asagi_tetik" type="T_BOOL" access="ReadWrite" />
+        <Node name="DonerTabla_Sabitleme_Yukari_tetik" type="T_BOOL" access="ReadWrite" />
+        <Node name="DonerTabla_srv_haraket_izin" type="T_BOOL" access="ReadWrite" />
+        <Node name="DonerTabla_Srv_Sifir_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="DonerTablaSrvEnableOk" type="T_BOOL" access="ReadWrite" />
+        <Node name="DonerTablaSrvEvde" type="T_BOOL" access="ReadWrite" />
+        <Node name="drvcontrol" type="T_WORD" access="ReadWrite" />
+        <Node name="drvstat" type="T_WORD" access="ReadWrite" />
+        <Node name="dummy_disari_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummy_etikete_dinamik" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummy_etiketsizde" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummy_kaliba_dinamik" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummy_sarmal_vkm_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummy_sarmal_vkm_yap2" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummy_srv_etiket_almaya_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummy_srv_etikete_gidiyor" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummy_srv_etikette_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummy_srv_etiketten_geri_gel" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummy_srv_iceride_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummy_srv_kaliba_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="Dummy_srv_kalipta_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummy_srv_kaliptan_geri_gel" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummy_srv_kaliptan_geri_geliyor" type="T_BOOL" access="ReadWrite" />
+        <Node name="Dummy_srv_ufleme_poz" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummy_taban_vkm_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummy_ufleme_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummy_vkm_kes_tetik" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummydon_srv_180de_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummydon_srv_geride_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummydon_srv_ileride_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="DummyDonSrvEvde" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummysiz_calisma" type="T_BOOL" access="ReadWrite" />
+        <Node name="DummySrv2Evde" type="T_BOOL" access="ReadWrite" />
+        <Node name="DummySrvEvde" type="T_BOOL" access="ReadWrite" />
+        <Node name="DummySrvKalibaCamDevrede" type="T_BOOL" access="ReadWrite" />
+        <Node name="DummySrvKalibaYavasCamDevrede" type="T_BOOL" access="ReadWrite" />
+        <Node name="ekran_similasyon1" type="T_BOOL" access="ReadWrite" />
+        <Node name="ekran_similasyon2" type="T_BOOL" access="ReadWrite" />
+        <Node name="ekran_similasyon3" type="T_BOOL" access="ReadWrite" />
+        <Node name="ekran_similasyon4" type="T_BOOL" access="ReadWrite" />
+        <Node name="ekran_similasyon5" type="T_BOOL" access="ReadWrite" />
+        <Node name="ekran_similasyon6" type="T_BOOL" access="ReadWrite" />
+        <Node name="ekran_similasyon7" type="T_BOOL" access="ReadWrite" />
+        <Node name="ekran_similasyon8" type="T_BOOL" access="ReadWrite" />
+        <Node name="Eksen_urunleri_aldi" type="T_BOOL" access="ReadWrite" />
+        <Node name="enjection_side_ufleme_yapabilir" type="T_BOOL" access="ReadWrite" />
+        <Node name="etiket2_ufleme_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="etiket_degistir_aktif" type="T_BOOL" access="ReadWrite" />
+        <Node name="etiket_srv_dummye_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="etiket_srv_magazine_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="etiket_ufleme_set" type="T_BOOL" access="ReadWrite" />
+        <Node name="EtiketSrv2Evde" type="T_BOOL" access="ReadWrite" />
+        <Node name="EtiketSrvEvde" type="T_BOOL" access="ReadWrite" />
+        <Node name="etk_srv_aciya_gidiyor" type="T_BOOL" access="ReadWrite" />
+        <Node name="fEtiketDummye" type="T_LREAL" access="ReadWrite" />
+        <Node name="firca_ileri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="fJerkRatio_AnaServo" type="T_LREAL" access="ReadWrite" />
+        <Node name="GuvenlikDevresiOk" type="T_BOOL" access="ReadWrite" />
+        <Node name="Hmi_ActSycFiyat" type="T_REAL" access="ReadWrite" />
+        <Node name="Hmi_ActSycFiyat1" type="T_REAL" access="ReadWrite" />
+        <Node name="Hmi_ActSycTkW" type="T_REAL" access="ReadWrite" />
+        <Node name="Hmi_ElkBrmFiyat" type="T_REAL" access="ReadWrite" />
+        <Node name="Hmi_SilSycFiyat" type="T_BOOL" access="ReadWrite" />
+        <Node name="Hmi_TPwr" type="T_DWORD" access="ReadWrite" />
+        <Node name="Hmi_TTFiyat" type="T_REAL" access="ReadWrite" />
+        <Node name="ikinci_blok_bir_tur_atti" type="T_BOOL" access="ReadWrite" />
+        <Node name="ikinci_cycle_kontrol" type="T_BOOL" access="ReadWrite" />
+        <Node name="ikinci_urun_icin_dizme_ileri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="ikinci_urun_icin_urun_tasiyici_geri_gidebilir" type="T_BOOL" access="ReadWrite" />
+        <Node name="ikinci_urun_icin_urun_tasiyici_geri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="kalipta_kal_ok" type="T_BOOL" access="ReadWrite" />
+        <Node name="Kameralar_Devrede" type="T_BOOL" access="ReadWrite" />
+        <Node name="Kapak_mod" type="T_BOOL" access="ReadWrite" />
+        <Node name="kavite1_saglam" type="T_BOOL" access="ReadWrite" />
+        <Node name="kavite2_saglam" type="T_BOOL" access="ReadWrite" />
+        <Node name="kavite3_saglam" type="T_BOOL" access="ReadWrite" />
+        <Node name="kavite4_saglam" type="T_BOOL" access="ReadWrite" />
+        <Node name="kontakSet2" type="T_BOOL" access="ReadWrite" />
+        <Node name="kontrol1" type="T_BOOL" access="ReadWrite" />
+        <Node name="kontrol_reset" type="T_BOOL" access="ReadWrite" />
+        <Node name="Konveyor_ilk_sira_ok" type="T_BOOL" access="ReadWrite" />
+        <Node name="konveyor_piston1_ileri_tetik" type="T_BOOL" access="ReadWrite" />
+        <Node name="konveyor_piston2_ileri_tetik" type="T_BOOL" access="ReadWrite" />
+        <Node name="konveyor_piston3_ileri_tetik" type="T_BOOL" access="ReadWrite" />
+        <Node name="Konveyor_Senns1_Set" type="T_BOOL" access="ReadWrite" />
+        <Node name="Konveyor_Senns1_Set2" type="T_BOOL" access="ReadWrite" />
+        <Node name="Konveyor_Sens3_set" type="T_BOOL" access="ReadWrite" />
+        <Node name="konveyor_srv_haraket_izin" type="T_BOOL" access="ReadWrite" />
+        <Node name="konveyor_srv_referans_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="konveyore_urunler_birakildi" type="T_BOOL" access="ReadWrite" />
+        <Node name="KonveyorSrvEnableOk" type="T_BOOL" access="ReadWrite" />
+        <Node name="konveyorSrvEvde" type="T_BOOL" access="ReadWrite" />
+        <Node name="kulp_alindi" type="T_BOOL" access="ReadWrite" />
+        <Node name="kulp_bastir_ileri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="kulp_cakma_devrede" type="T_BOOL" access="ReadWrite" />
+        <Node name="kulp_trans_asagi_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="kulp_trans_geri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="kulp_trans_ileri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="kulp_trans_yukari_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="MC_DizmeSrvKonveyoreYvs" type="T_MC_MoveAbsolute" access="ReadWrite" />
+        <Node name="MC_DizmeSrvYukari" type="T_MC_MoveAbsolute" access="ReadWrite" />
+        <Node name="otomatik_rampa_devrede" type="T_BOOL" access="ReadWrite" />
+        <Node name="r_tab_etk_dmyde_ileri_gecik_op" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvikinciUrunAccOran" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvikinciUrunDecOran" type="T_REAL" access="ReadWrite" />
+        <Node name="ReferansaGit" type="T_BOOL" access="ReadWrite" />
+        <Node name="resetle" type="T_BOOL" access="ReadWrite" />
+        <Node name="robot_guv_dinamik" type="T_BOOL" access="ReadWrite" />
+        <Node name="robot_guv_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="robot_side_ufleme_yapabilir" type="T_BOOL" access="ReadWrite" />
+        <Node name="RobotCalisiyor" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etiket_vkm_tetik" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etiketsizde" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_dummye_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_dummye_tetik" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_ileri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_magazine_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_magazine_tetik" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_ufleme_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_ufleme_yapabilir" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_vkm2_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_vkm_kes_tetik" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_vkm_ok" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_vkm_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_yanastir_disari_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_yanastir_iceri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="seperator_kapi" type="T_BOOL" access="ReadWrite" />
+        <Node name="ServolarReferansta" type="T_BOOL" access="ReadWrite" />
+        <Node name="statik_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="staubli_0_derece_Don_tetik" type="T_BOOL" access="ReadWrite" />
+        <Node name="staubli_180_derece_Don_tetik" type="T_BOOL" access="ReadWrite" />
+        <Node name="stepleri_resetle" type="T_BOOL" access="ReadWrite" />
+        <Node name="t_dizme_vkm_ok" type="T_TIME" access="ReadWrite" />
+        <Node name="t_konveyor_durma2_zamani" type="T_TIME" access="ReadWrite" />
+        <Node name="t_konveyor_durma_zamani" type="T_TIME" access="ReadWrite" />
+        <Node name="t_Ref_konveyor_durma_zamani" type="T_TIME" access="ReadWrite" />
+        <Node name="t_reset_gecikmesi_cycle_control" type="T_TIME" access="ReadWrite" />
+        <Node name="t_reset_gecikmesi_enjeksiyon_side" type="T_TIME" access="ReadWrite" />
+        <Node name="t_reset_gecikmesi_robot_side" type="T_TIME" access="ReadWrite" />
+        <Node name="t_sarmal_etk_ufleme" type="T_TIME" access="ReadWrite" />
+        <Node name="taban_calisma_devrede" type="T_BOOL" access="ReadWrite" />
+        <Node name="taban_etiketsizde" type="T_BOOL" access="ReadWrite" />
+        <Node name="taban_etk_dummyde" type="T_BOOL" access="ReadWrite" />
+        <Node name="taban_etk_dummye_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="taban_etk_magazinde" type="T_BOOL" access="ReadWrite" />
+        <Node name="taban_etk_magazine_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="taban_etk_vkm_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="targetspeed" type="T_WORD" access="ReadWrite" />
+        <Node name="tek_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="TestModu" type="T_BOOL" access="ReadWrite" />
+        <Node name="unite_Calis" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun1_alindi" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun2_alindi" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun3_alindi" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun4_alindi" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun5_alindi" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun6_alindi" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun7_alindi" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun8_alindi" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_alma_poz_aktif" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_almaya_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_at" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_at_enjection_side" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_at_robot_side" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_disari_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_iceri_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_kulbu_verdi" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_tasiyici_birinci_cycle_urun_alamya_gidiyor" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_tasiyici_geri_tetik" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_tasiyici_ikinci_cycle_urun_alamya_gidiyor" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_tasiyici_ikinci_urunden_geri_geliyor" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_tasiyici_konveyore_donuyor" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_almaya_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_alt_ufleme2_set" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_alt_ufleme_set" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_alt_ufleme_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_alt_ufleme_yap2" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_alt_ufleme_yapabilir" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_alt_ufleme_yapabilir2" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_alt_vkm2_kes_tetik" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_alt_vkm_kes_tetik" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_alt_vkm_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_alt_vkm_yap2" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_ufleme_ok" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_ufleme_ok2" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_ufleme_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_ufleme_yap2" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_ufleme_yapabilir" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_ufleme_yapabilir2" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_ust_alt_vkm_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_ust_alt_vkm_yap2" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_ust_ufleme2_set" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_ust_ufleme_ok" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_ust_ufleme_set" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_ust_ufleme_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_ust_ufleme_yap2" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_ust_ufleme_yapabilir" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_ust_ufleme_yapabilir2" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_ust_vkm2_kes_tetik" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_ust_vkm_kes_tetik" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_ust_vkm_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_ust_vkm_yap2" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_vermeye_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_vkm2_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_vkm_ufleme2_set" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_vkm_ufleme_set" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_vkm_ufleme_yapabilir" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_vkm_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_transfer_dizmeye_gidiyor" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_transfer_urunalmaya_gidiyor" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_ufleme_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_vkm_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="urunal_timeout" type="T_BOOL" access="ReadWrite" />
+        <Node name="UrunSrv2Evde" type="T_BOOL" access="ReadWrite" />
+        <Node name="UrunSrvEvde" type="T_BOOL" access="ReadWrite" />
+        <Node name="UrunTransSrvEvde" type="T_BOOL" access="ReadWrite" />
+        <Node name="ustInsidekamera_aktif" type="T_BOOL" access="ReadWrite" />
+        <Node name="valf_reset" type="T_BOOL" access="ReadWrite" />
+        <Node name="wDiagnosticNumberAnaServo" type="T_WORD" access="Read" directaddress="%IW600" />
+        <Node name="wDiagnosticNumberDizmeServo" type="T_WORD" access="Read" directaddress="%IW604" />
+        <Node name="wDiagnosticNumberDummyServo" type="T_WORD" access="Read" directaddress="%IW606" />
+        <Node name="X_srv_haraket_izin" type="T_BOOL" access="ReadWrite" />
+        <Node name="X_Srv_Sifir_Soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="X_Srv_Urun_almada_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="X_srv_Urun_Almaya_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="X_Srv_Urun_birakmada_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="X_srv_urun_birakmaya_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="XSrvEnableOk" type="T_BOOL" access="ReadWrite" />
+        <Node name="Y_srv_haraket_izin" type="T_BOOL" access="ReadWrite" />
+        <Node name="Y_srv_sifir_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="Y_srv_urun_almada_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="Y_srv_Urun_Almaya_Git" type="T_BOOL" access="ReadWrite" />
+        <Node name="Y_srv_urun_birakmada_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="Y_srv_urun_birakmaya_gidiyor" type="T_BOOL" access="ReadWrite" />
+        <Node name="Y_srv_urun_birakmaya_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="Yavas_kalkis_iptal" type="T_BOOL" access="ReadWrite" />
+        <Node name="YSrvEnableOk" type="T_BOOL" access="ReadWrite" />
+        <Node name="Z_Srv_Beklemede_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="Z_Srv_guv_alanda" type="T_BOOL" access="ReadWrite" />
+        <Node name="Z_Srv_Guv_alanda_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="Z_srv_haraket_izin" type="T_BOOL" access="ReadWrite" />
+        <Node name="Z_srv_konveyor_yavas_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="Z_srv_konveyore_gidiyor" type="T_BOOL" access="ReadWrite" />
+        <Node name="Z_srv_Urun_almadan_yukari_gidiyor" type="T_BOOL" access="ReadWrite" />
+        <Node name="Z_srv_Urun_Almadan_yukari_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="Z_srv_urun_almaya_gidiyor" type="T_BOOL" access="ReadWrite" />
+        <Node name="Z_srv_Urun_Almaya_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="Z_Srv_urun_birakmaya_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="Z_srv_urun_birakmaya_yvs_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="Z_Srv_UrunAlmada_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="Z_Srv_UrunBirakma_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="Z_srv_urunleri_alabilir" type="T_BOOL" access="ReadWrite" />
+        <Node name="Z_srv_urunleri_alabilir_ok" type="T_BOOL" access="ReadWrite" />
+        <Node name="Z_srv_vkm_kes" type="T_BOOL" access="ReadWrite" />
+        <Node name="Z_srv_vkm_kes_tetik" type="T_BOOL" access="ReadWrite" />
+        <Node name="Z_srv_vkm_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="Z_srv_vkm_yap_tetik" type="T_BOOL" access="ReadWrite" />
+        <Node name="Z_Srv_yukarida_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="Z_srv_yukariya_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="Z_srv_yukariya_kalkis_soft" type="T_BOOL" access="ReadWrite" />
+        <Node name="Z_srv_yukariya_yavas_git" type="T_BOOL" access="ReadWrite" />
+        <Node name="Z_ufleme_set" type="T_BOOL" access="ReadWrite" />
+        <Node name="Z_ufleme_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="ZSrvEnableOk" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="INPUTS">
+        <Node name="acil_stop" type="T_BOOL" access="ReadWrite" />
+        <Node name="ana_geride" type="T_BOOL" access="ReadWrite" />
+        <Node name="ana_ileride" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_anakol_fren_ac" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme_fren_ac" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_etiket_degistir" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_etiket_fren_ac" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_etiketli_calisma" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_hata_sil" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_kapi_kilit" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_kapi_serbest" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_referans" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_sadece_sarmal_calisma" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_sadece_taban_calisma" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_start" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_stop" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_vakum_pompa_kilit" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_alani_serbest" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_geride" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_ileride" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_konveyorde" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_srv_yukarida" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_urunde" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_vkm_sens" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummy_srv_iceride" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummy_taban_vkm_sens" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummy_vkm_sens" type="T_BOOL" access="ReadWrite" />
+        <Node name="erkek_kalipta_urun_var" type="T_BOOL" access="ReadWrite" />
+        <Node name="faz_kontrol_rolesi" type="T_BOOL" access="ReadWrite" />
+        <Node name="guc_rolesi_kontagi" type="T_BOOL" access="ReadWrite" />
+        <Node name="hava" type="T_BOOL" access="ReadWrite" />
+        <Node name="imm_acil_stop" type="T_BOOL" access="ReadWrite" />
+        <Node name="imm_itici_geride" type="T_BOOL" access="ReadWrite" />
+        <Node name="imm_kalip_acik" type="T_BOOL" access="ReadWrite" />
+        <Node name="imm_kalip_acik_ex" type="T_BOOL" access="ReadWrite" />
+        <Node name="imm_kalip_kapali" type="T_BOOL" access="ReadWrite" />
+        <Node name="imm_kapi" type="T_BOOL" access="ReadWrite" />
+        <Node name="imm_oto" type="T_BOOL" access="ReadWrite" />
+        <Node name="kalip_aciliyor_sens" type="T_BOOL" access="ReadWrite" />
+        <Node name="konveyor_manuel" type="T_BOOL" access="ReadWrite" />
+        <Node name="magazin_manyetik_kapi_bilgisi" type="T_BOOL" access="ReadWrite" />
+        <Node name="manyetik_kapi_bilgisi" type="T_BOOL" access="ReadWrite" />
+        <Node name="MurrAnakolinputAdasi1" type="T_BYTE" access="ReadWrite" />
+        <Node name="MurrAnakolinputAdasi2" type="T_BYTE" access="ReadWrite" />
+        <Node name="MurrDizmeinputAdasi" type="T_BYTE" access="ReadWrite" />
+        <Node name="MurrEtiketinputAdasi1" type="T_BYTE" access="ReadWrite" />
+        <Node name="MurrEtiketinputAdasi2" type="T_BYTE" access="ReadWrite" />
+        <Node name="MurrEtiketinputAdasi3" type="T_BYTE" access="ReadWrite" />
+        <Node name="MurrValfinputAdasi1" type="T_BYTE" access="ReadWrite" />
+        <Node name="robot_guv_alanda" type="T_BOOL" access="ReadWrite" />
+        <Node name="robot_guv_alanda2" type="T_BOOL" access="ReadWrite" />
+        <Node name="robot_kapi" type="T_BOOL" access="ReadWrite" />
+        <Node name="robot_kapi1_manyetik_kapi_bilgi" type="T_BOOL" access="ReadWrite" />
+        <Node name="robot_kapi2_manyetik_kapi_bilgi" type="T_BOOL" access="ReadWrite" />
+        <Node name="robot_merkez_sens" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_azaldi" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_dummyde" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_dummyde1" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_dummyde2" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_geride" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_geride1" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_geride2" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_geride3" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_geride4" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_ileride" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_ileride1" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_ileride2" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_ileride3" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_ileride4" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_magazinde" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_magazinde1" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_magazinde2" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_vkm_sens" type="T_BOOL" access="ReadWrite" />
+        <Node name="tank_vkm_sens" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_disarida" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_disarida1" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_disarida2" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_iceride" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_iceride1" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_iceride2" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_vkm_sens" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_vkm_sens" type="T_BOOL" access="ReadWrite" />
+        <Node name="urunTasiyici_geri_dinamik_sens" type="T_BOOL" access="ReadWrite" />
+        <Node name="YEDEK" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="MODBUS">
+        <Node name="Act_GrupE" type="T_ARRAY__0__8__OF_WORD" access="ReadWrite" />
+        <Node name="Act_GrupI" type="T_ARRAY__0__7__OF_REAL" access="ReadWrite" />
+        <Node name="Act_GrupV" type="T_ARRAY__0__16__OF_REAL" access="ReadWrite" />
+        <Node name="Act_PwrDword" type="T_DWORD" access="ReadWrite" />
+        <Node name="Act_PwrDword1" type="T_DWORD" access="ReadWrite" />
+        <Node name="Act_PwrkW" type="T_REAL" access="ReadWrite" />
+        <Node name="Act_PwrReal" type="T_REAL" access="ReadWrite" />
+        <Node name="ActSaySycKw" type="T_REAL" access="ReadWrite" />
+        <Node name="ActSycFiyatDeg" type="T_REAL" access="ReadWrite" />
+        <Node name="ActSycTkWDeg" type="T_REAL" access="ReadWrite" />
+        <Node name="ADDM_MODBUS_EA" type="T_ADDM" access="ReadWrite" />
+        <Node name="faz_1aaa" type="T_BOOL" access="ReadWrite" />
+        <Node name="l" type="T_BOOL" access="ReadWrite" />
+        <Node name="READ_VAR_CURRENT" type="T_READ_VAR" access="ReadWrite" />
+        <Node name="READ_VAR_ENERGY" type="T_READ_VAR" access="ReadWrite" />
+        <Node name="READ_VAR_POWER" type="T_READ_VAR" access="ReadWrite" />
+        <Node name="READ_VAR_VOLTAGE" type="T_READ_VAR" access="ReadWrite" />
+        <Node name="S2" type="T_BOOL" access="ReadWrite" />
+        <Node name="S3" type="T_BOOL" access="ReadWrite" />
+        <Node name="S4" type="T_BOOL" access="ReadWrite" />
+        <Node name="S5" type="T_BOOL" access="ReadWrite" />
+        <Node name="T_ActModRead" type="T_INT" access="ReadWrite" />
+        <Node name="T_M" type="T_BOOL" access="ReadWrite" />
+        <Node name="T_ModRead" type="T_TON" access="ReadWrite" />
+        <Node name="T_y" type="T_DINT" access="ReadWrite" />
+        <Node name="TON_START" type="T_TON" access="ReadWrite" />
+        <Node name="v_addresModbusEA" type="T_ADDRESS" access="ReadWrite" />
+        <Node name="v_bReadCurrentCommError" type="T_BYTE" access="ReadWrite" />
+        <Node name="v_bReadEnergyCommError" type="T_BYTE" access="ReadWrite" />
+        <Node name="v_bReadPowerCommError" type="T_BYTE" access="ReadWrite" />
+        <Node name="v_bReadVoltageCommError" type="T_BYTE" access="ReadWrite" />
+        <Node name="v_xAddressError" type="T_BOOL" access="ReadWrite" />
+        <Node name="v_xReadCurrentBusy" type="T_BOOL" access="ReadWrite" />
+        <Node name="v_xReadCurrentDone" type="T_BOOL" access="ReadWrite" />
+        <Node name="v_xReadCurrentError" type="T_BOOL" access="ReadWrite" />
+        <Node name="v_xReadEnergyBusy" type="T_BOOL" access="ReadWrite" />
+        <Node name="v_xReadEnergyDone" type="T_BOOL" access="ReadWrite" />
+        <Node name="v_xReadEnergyError" type="T_BOOL" access="ReadWrite" />
+        <Node name="v_xReadPowerBusy" type="T_BOOL" access="ReadWrite" />
+        <Node name="v_xReadPowerDone" type="T_BOOL" access="ReadWrite" />
+        <Node name="v_xReadPowerError" type="T_BOOL" access="ReadWrite" />
+        <Node name="v_xReadVoltageBusy" type="T_BOOL" access="ReadWrite" />
+        <Node name="v_xReadVoltageDone" type="T_BOOL" access="ReadWrite" />
+        <Node name="v_xReadVoltageError" type="T_BOOL" access="ReadWrite" />
+        <Node name="v_xStartProgram" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="OUTPUTS">
+        <Node name="alarm_lambasi" type="T_BOOL" access="ReadWrite" />
+        <Node name="ani_durdurma_rolesi" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_konveyore" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_kulp_sabitleme" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_ufleme" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_urune" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_vkm" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_vkm2" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummy_sarmal_vkm" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummy_sarmal_vkm2" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummy_sarmal_vkm3" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummy_sarmal_vkm4" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummy_ufleme" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummy_ufleme2" type="T_BOOL" access="ReadWrite" />
+        <Node name="enjection_side_ufleme_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="enjeksiyon_ufleme" type="T_BOOL" access="ReadWrite" />
+        <Node name="etiket_yvs_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="euromap_kapi_reset" type="T_BOOL" access="ReadWrite" />
+        <Node name="hata_sil_lambasi" type="T_BOOL" access="ReadWrite" />
+        <Node name="hazir_lambasi" type="T_BOOL" access="ReadWrite" />
+        <Node name="imm_robot_devre_disi" type="T_BOOL" access="ReadWrite" />
+        <Node name="inside_alt_sonuc_reset" type="T_BOOL" access="ReadWrite" />
+        <Node name="inside_alt_ust_aydinlatma" type="T_BOOL" access="ReadWrite" />
+        <Node name="inside_ust_sonuc_reset" type="T_BOOL" access="ReadWrite" />
+        <Node name="kalip_kapa_izin" type="T_BOOL" access="ReadWrite" />
+        <Node name="kamera_lamba" type="T_BOOL" access="ReadWrite" />
+        <Node name="kamera_lamba_aktif" type="T_BOOL" access="ReadWrite" />
+        <Node name="kamera_tetik" type="T_BOOL" access="ReadWrite" />
+        <Node name="kamera_tetik_izin" type="T_BOOL" access="ReadWrite" />
+        <Node name="konveyor" type="T_BOOL" access="ReadWrite" />
+        <Node name="konveyor_calisiyor_staubli" type="T_BOOL" access="ReadWrite" />
+        <Node name="konveyor_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="lamba_kapi_kitle" type="T_BOOL" access="ReadWrite" />
+        <Node name="lamba_kapi_serbest" type="T_BOOL" access="ReadWrite" />
+        <Node name="makina_valfi1" type="T_BOOL" access="ReadWrite" />
+        <Node name="makina_valfi2" type="T_BOOL" access="ReadWrite" />
+        <Node name="makina_valfi3" type="T_BOOL" access="ReadWrite" />
+        <Node name="makina_valfi4" type="T_BOOL" access="ReadWrite" />
+        <Node name="manyetik_kapi_bobin" type="T_BOOL" access="ReadWrite" />
+        <Node name="MurrAdakolOuputAdasi2" type="T_BYTE" access="ReadWrite" />
+        <Node name="MurrDizmeOutputAdasi" type="T_BYTE" access="ReadWrite" />
+        <Node name="MurrEtiketOutputAdasi" type="T_BYTE" access="ReadWrite" />
+        <Node name="MurrValfOutputAdasi1" type="T_BYTE" access="ReadWrite" />
+        <Node name="MurrValfOutputAdasi2" type="T_BYTE" access="ReadWrite" />
+        <Node name="MurrValfOutputAdasi3" type="T_BYTE" access="ReadWrite" />
+        <Node name="ref_lambasi" type="T_BOOL" access="ReadWrite" />
+        <Node name="robot_guvenli_alanda_IMM" type="T_BOOL" access="ReadWrite" />
+        <Node name="robot_side_ufleme_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="role_11_13" type="T_BOOL" access="ReadWrite" />
+        <Node name="role_14_15" type="T_BOOL" access="ReadWrite" />
+        <Node name="role_1_2" type="T_BOOL" access="ReadWrite" />
+        <Node name="role_5_6" type="T_BOOL" access="ReadWrite" />
+        <Node name="role_9_10" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_dummye" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_magazine" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_ufleme" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_ufleme2" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_vkm" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_vkm2" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_vkm3" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_yanastir_disari" type="T_BOOL" access="ReadWrite" />
+        <Node name="sarmal_etk_yanastir_iceri" type="T_BOOL" access="ReadWrite" />
+        <Node name="side_alt_sonuc_reset" type="T_BOOL" access="ReadWrite" />
+        <Node name="side_alt_ust_aydinlatma" type="T_BOOL" access="ReadWrite" />
+        <Node name="side_ust_sonuc_reset" type="T_BOOL" access="ReadWrite" />
+        <Node name="siren" type="T_BOOL" access="ReadWrite" />
+        <Node name="siyirici_ileri_izin" type="T_BOOL" access="ReadWrite" />
+        <Node name="statik_sarmal" type="T_BOOL" access="ReadWrite" />
+        <Node name="statik_taban" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_disari" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_iceri" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_ufleme" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_ufleme1" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_vkm" type="T_BOOL" access="ReadWrite" />
+        <Node name="vakum_pompa_tetik" type="T_BOOL" access="ReadWrite" />
+        <Node name="yardimci1" type="T_BOOL" access="ReadWrite" />
+        <Node name="yedek" type="T_BOOL" access="ReadWrite" />
+        <Node name="yedekValf" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="RETAINS">
+        <Node name="ActGrupPwr" type="T_ARRAY__0__7__OF_REAL" access="ReadWrite" />
+        <Node name="ana_srv_gercek_poz" type="T_REAL" access="ReadWrite" />
+        <Node name="bt_ana_acil_durdur" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_ana_geri_dinamik" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_ana_srv_hizli_ileri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_bos1" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_bos10" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_bos11" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_bos12" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_bos13" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_bos14" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_bos15" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_bos16" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_bos17" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_bos18" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_bos19" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_bos2" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_bos20" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_bos3" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_bos4" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_bos5" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_bos6" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_bos7" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_bos8" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_bos9" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme_cam" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme_cam_yukari" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme_urune_dinamik" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme_yvs_durus" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dizme_yvs_kalkis" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dummy_etikete_dinamik" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dummy_kaliba_dinamik" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dummy_kaliba_yavas_dinamik" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dummy_yavas_geri" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dummydon_devrede" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_dummydon_ref_devre_disi" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_etiketsiz_kalip_kapa_gecik" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_GizliAyar" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_guv_alan_dinamik" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_kalip_kapa_sinyal_uzat" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_kamera_devrede" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_kulp_alma_hatasi" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_kulp_cakma_devrede" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_orta_poz_aktif" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_servis1_reset" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_servis2_reset" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_urunal_dinamik_aktif" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_urunal_hata_dizme_yap" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_urunTasiyici_urune_dinamik" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_urunver_dinamik_aktif" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_vakum_hafiza" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_yan_etk_vkm_kes" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_Z_yvs_durus" type="T_BOOL" access="ReadWrite" />
+        <Node name="bt_Z_yvs_kalkis" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme1_vkm_aktif" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme1_vkm_pasif" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme2_vkm_aktif" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme2_vkm_pasif" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme3_vkm_aktif" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme3_vkm_pasif" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme4_vkm_aktif" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme4_vkm_pasif" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme5_vkm_aktif" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme5_vkm_pasif" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme6_vkm_aktif" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme6_vkm_pasif" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme7_vkm_aktif" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme7_vkm_pasif" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme8_vkm_aktif" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme8_vkm_pasif" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_srv_gercek_poz" type="T_REAL" access="ReadWrite" />
+        <Node name="dizme_srv_konveyor_poz" type="T_REAL" access="ReadWrite" />
+        <Node name="dizme_srv_konveyor_yavas_kalkis_poz" type="T_REAL" access="ReadWrite" />
+        <Node name="dizme_srv_konveyor_yavas_poz" type="T_REAL" access="ReadWrite" />
+        <Node name="dizme_ufleme_aktif" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_ufleme_pasif" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_vkm_aktif" type="T_BOOL" access="ReadWrite" />
+        <Node name="dizme_vkm_aktif2" type="T_BOOL" access="ReadWrite" />
+        <Node name="DonerTabla_srv_gercek_poz" type="T_REAL" access="ReadWrite" />
+        <Node name="dummy_srv_gercek_poz" type="T_REAL" access="ReadWrite" />
+        <Node name="dummy_ufleme_aktif" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummy_vkm_aktif" type="T_BOOL" access="ReadWrite" />
+        <Node name="dummydon_srv_gercek_poz" type="T_REAL" access="ReadWrite" />
+        <Node name="etiket_dinamil_anakol" type="T_REAL" access="ReadWrite" />
+        <Node name="etiket_ileri_dinamik_pos" type="T_REAL" access="ReadWrite" />
+        <Node name="etiket_srv_gercek_poz" type="T_REAL" access="ReadWrite" />
+        <Node name="etk_srv_vkm_kesme_poz" type="T_REAL" access="ReadWrite" />
+        <Node name="etk_ufleme_aktif" type="T_BOOL" access="ReadWrite" />
+        <Node name="etk_vkm_aktif" type="T_BOOL" access="ReadWrite" />
+        <Node name="etk_vkm_kesme_anakol_poz" type="T_REAL" access="ReadWrite" />
+        <Node name="FB_DizmeSrvYukariyaKalkis1" type="T_REAL" access="ReadWrite" />
+        <Node name="fRobotBeklemeZaman" type="T_REAL" access="ReadWrite" />
+        <Node name="fRobotBeklemeZaman1" type="T_REAL" access="ReadWrite" />
+        <Node name="fRobotBeklemeZaman2" type="T_REAL" access="ReadWrite" />
+        <Node name="fRobotBeklemeZaman3" type="T_REAL" access="ReadWrite" />
+        <Node name="fRobotBeklemeZaman4" type="T_REAL" access="ReadWrite" />
+        <Node name="fRobotBeklemeZaman5" type="T_REAL" access="ReadWrite" />
+        <Node name="fRobotBeklemeZaman6" type="T_REAL" access="ReadWrite" />
+        <Node name="fRobotBeklemeZaman7" type="T_REAL" access="ReadWrite" />
+        <Node name="fRobotHazirlikZaman" type="T_REAL" access="ReadWrite" />
+        <Node name="fRobotHazirlikZaman1" type="T_REAL" access="ReadWrite" />
+        <Node name="fRobotHazirlikZaman2" type="T_REAL" access="ReadWrite" />
+        <Node name="fRobotHazirlikZaman3" type="T_REAL" access="ReadWrite" />
+        <Node name="fRobotHazirlikZaman4" type="T_REAL" access="ReadWrite" />
+        <Node name="fRobotHazirlikZaman5" type="T_REAL" access="ReadWrite" />
+        <Node name="fRobotHazirlikZaman6" type="T_REAL" access="ReadWrite" />
+        <Node name="fRobotHazirlikZaman7" type="T_REAL" access="ReadWrite" />
+        <Node name="fTakeOutZaman" type="T_REAL" access="ReadWrite" />
+        <Node name="fTakeOutZaman1" type="T_REAL" access="ReadWrite" />
+        <Node name="fTakeOutZaman2" type="T_REAL" access="ReadWrite" />
+        <Node name="fTakeOutZaman3" type="T_REAL" access="ReadWrite" />
+        <Node name="fTakeOutZaman4" type="T_REAL" access="ReadWrite" />
+        <Node name="fTakeOutZaman5" type="T_REAL" access="ReadWrite" />
+        <Node name="fTakeOutZaman6" type="T_REAL" access="ReadWrite" />
+        <Node name="fTakeOutZaman7" type="T_REAL" access="ReadWrite" />
+        <Node name="fTotalCycleZaman" type="T_REAL" access="ReadWrite" />
+        <Node name="fTotalCycleZaman1" type="T_REAL" access="ReadWrite" />
+        <Node name="fTotalCycleZaman2" type="T_REAL" access="ReadWrite" />
+        <Node name="fTotalCycleZaman3" type="T_REAL" access="ReadWrite" />
+        <Node name="fTotalCycleZaman4" type="T_REAL" access="ReadWrite" />
+        <Node name="fTotalCycleZaman5" type="T_REAL" access="ReadWrite" />
+        <Node name="fTotalCycleZaman6" type="T_REAL" access="ReadWrite" />
+        <Node name="fTotalCycleZaman7" type="T_REAL" access="ReadWrite" />
+        <Node name="gunluk_sayici" type="T_REAL" access="ReadWrite" />
+        <Node name="gunluk_uretim" type="T_REAL" access="ReadWrite" />
+        <Node name="i_sifre_op" type="T_INT" access="ReadWrite" />
+        <Node name="iAayServis1" type="T_UINT" access="ReadWrite" />
+        <Node name="iAnaSrvBaslangicHizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="iAnaSrvEtkHizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="iAnaSrvfircaGeriHizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="iAnaSrvfircaileriHizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="iAnaSrvGeriHizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="iAnaSrvileriHizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="iAnaSrvOrtayaHizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="iay" type="T_INT" access="ReadWrite" />
+        <Node name="iAyServis2" type="T_UINT" access="ReadWrite" />
+        <Node name="iBosVar1" type="T_INT" access="ReadWrite" />
+        <Node name="iBosVar10" type="T_INT" access="ReadWrite" />
+        <Node name="iBosVar2" type="T_INT" access="ReadWrite" />
+        <Node name="iBosVar3" type="T_INT" access="ReadWrite" />
+        <Node name="iBosVar4" type="T_INT" access="ReadWrite" />
+        <Node name="iBosVar5" type="T_INT" access="ReadWrite" />
+        <Node name="iBosVar6" type="T_INT" access="ReadWrite" />
+        <Node name="iBosVar7" type="T_INT" access="ReadWrite" />
+        <Node name="iBosVar8" type="T_INT" access="ReadWrite" />
+        <Node name="iBosVar9" type="T_INT" access="ReadWrite" />
+        <Node name="idakika" type="T_INT" access="ReadWrite" />
+        <Node name="iDizmeCamHizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="iDizmeIkinciUrun" type="T_INT" access="ReadWrite" />
+        <Node name="iDizmeSrvBaslangicHizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="iDizmeSrvikinciurunHizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="iDizmeSrvKonveyorHizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="iDizmeSrvKulpHizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="iDizmeSrvKulpYukariHizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="iDizmeSrvOrtayaHizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="iDizmeSrvUrunAlmaHizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="iDizmeSrvUrunAlmaYukariHizYuzde" type="T_INT" access="ReadWrite" />
+        <Node name="iDizmeSrvYukariHizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="iDizmeSrvYukariYvsHizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="iDizmeSrvYvsDurusHizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="iDizSrvUrunAlmaYukariHizYuzde" type="T_INT" access="ReadWrite" />
+        <Node name="iDmySrvKalipGeriHizYuzde" type="T_INT" access="ReadWrite" />
+        <Node name="iDmySrvKalipYavasHizYuzde" type="T_INT" access="ReadWrite" />
+        <Node name="iDonerTabla0Yuzde" type="T_INT" access="ReadWrite" />
+        <Node name="iDonerTabla180Yuzde" type="T_INT" access="ReadWrite" />
+        <Node name="iDummyDonSrv180HizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="iDummyDonSrvBasHizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="iDummyDonSrvGeriHizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="iDummyDonSrvileriHizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="iDummySrvBaslangicHizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="iDummySrvEtiketGeriHizYuzde" type="T_INT" access="ReadWrite" />
+        <Node name="iDummySrvEtiketHizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="iDummySrvKalipHizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="iDummySrvSarmaHizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="iEtiketSrvAciHizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="iEtiketSrvBaslangicHizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="iEtiketSrvDummyHizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="iEtiketSrvMagazinHizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="igun" type="T_INT" access="ReadWrite" />
+        <Node name="igunServis1" type="T_UINT" access="ReadWrite" />
+        <Node name="igunServis2" type="T_UINT" access="ReadWrite" />
+        <Node name="iKonveyorSrvBaslangicYzds" type="T_INT" access="ReadWrite" />
+        <Node name="iKonveyorSrvIleriYuzde" type="T_INT" access="ReadWrite" />
+        <Node name="irDonerTablaBslngcHzYzdsi" type="T_INT" access="ReadWrite" />
+        <Node name="irXSrvBslngcHzYzdsi" type="T_INT" access="ReadWrite" />
+        <Node name="irYSrvBslngcHzYzdsi" type="T_INT" access="ReadWrite" />
+        <Node name="irZSrvBslngcHzYzdsi" type="T_INT" access="ReadWrite" />
+        <Node name="isaat" type="T_INT" access="ReadWrite" />
+        <Node name="isaniye" type="T_INT" access="ReadWrite" />
+        <Node name="iUrunTasiyiciIkinciUrun" type="T_INT" access="ReadWrite" />
+        <Node name="iUrunTasiyiciKonveyor" type="T_INT" access="ReadWrite" />
+        <Node name="iUrunTasiyiciYukari" type="T_INT" access="ReadWrite" />
+        <Node name="iXSrvUrunAlmaYuzde" type="T_INT" access="ReadWrite" />
+        <Node name="iXSrvUrunBirakmaYuzde" type="T_INT" access="ReadWrite" />
+        <Node name="iyil" type="T_INT" access="ReadWrite" />
+        <Node name="iYilServis1" type="T_UINT" access="ReadWrite" />
+        <Node name="iYilServis2" type="T_UINT" access="ReadWrite" />
+        <Node name="iYSrvUrunAlmaYuzde" type="T_INT" access="ReadWrite" />
+        <Node name="iYSrvUrunBirakmaYuzde" type="T_INT" access="ReadWrite" />
+        <Node name="iZSrvKnvyryvsHizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="iZSrvKonveyorYukariYuzde" type="T_INT" access="ReadWrite" />
+        <Node name="iZSrvKonveyorYuzde" type="T_INT" access="ReadWrite" />
+        <Node name="iZSrvUrnAlmdnYkriYzde" type="T_INT" access="ReadWrite" />
+        <Node name="iZSrvUrunAlmaYuzde" type="T_INT" access="ReadWrite" />
+        <Node name="iZSrvYkryvsHizYuzdesi" type="T_INT" access="ReadWrite" />
+        <Node name="kalip_goz_adedi" type="T_INT" access="ReadWrite" />
+        <Node name="kamera_devrede" type="T_BOOL" access="ReadWrite" />
+        <Node name="Konveyor_Senns1_Set2_zaman" type="T_REAL" access="ReadWrite" />
+        <Node name="Konveyor_srv_gercek_poz" type="T_REAL" access="ReadWrite" />
+        <Node name="limit10max1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit10max2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit10max3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit10max4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit10max5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit10max6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit10min1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit10min2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit10min3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit10min4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit10min5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit10min6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit11max1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit11max2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit11max3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit11max4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit11max5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit11max6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit11min1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit11min2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit11min3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit11min4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit11min5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit11min6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit12max1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit12max2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit12max3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit12max4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit12max5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit12max6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit12min1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit12min2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit12min3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit12min4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit12min5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit12min6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit13max1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit13max2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit13max3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit13max4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit13max5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit13max6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit13min1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit13min2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit13min3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit13min4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit13min5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit13min6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit14max1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit14max2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit14max3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit14max4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit14max5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit14max6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit14min1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit14min2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit14min3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit14min4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit14min5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit14min6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit15max1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit15max2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit15max3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit15max4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit15max5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit15max6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit15min1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit15min2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit15min3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit15min4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit15min5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit15min6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit16max1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit16max2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit16max3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit16max4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit16max5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit16max6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit16min1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit16min2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit16min3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit16min4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit16min5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit16min6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit17max1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit17max2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit17max3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit17max4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit17max5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit17max6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit17min1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit17min2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit17min3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit17min4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit17min5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit17min6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit18max1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit18max2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit18max3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit18max4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit18max5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit18max6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit18min1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit18min2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit18min3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit18min4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit18min5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit18min6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit19max1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit19max2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit19max3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit19max4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit19max5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit19max6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit19min1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit19min2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit19min3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit19min4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit19min5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit19min6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit1max1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit1max2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit1max3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit1max4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit1max5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit1max6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit1min1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit1min2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit1min3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit1min4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit1min5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit1min6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit20max1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit20max2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit20max3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit20max4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit20max5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit20max6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit20min1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit20min2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit20min3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit20min4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit20min5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit20min6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit2max1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit2max2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit2max3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit2max4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit2max5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit2max6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit2min1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit2min2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit2min3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit2min4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit2min5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit2min6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit3max1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit3max2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit3max3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit3max4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit3max5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit3max6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit3min1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit3min2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit3min3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit3min4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit3min5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit3min6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit4max1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit4max2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit4max3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit4max4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit4max5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit4max6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit4min1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit4min2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit4min3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit4min4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit4min5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit4min6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit5max1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit5max2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit5max3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit5max4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit5max5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit5max6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit5min1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit5min2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit5min3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit5min4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit5min5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit5min6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit6max1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit6max2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit6max3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit6max4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit6max5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit6max6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit6min1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit6min2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit6min3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit6min4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit6min5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit6min6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit7max1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit7max2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit7max3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit7max4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit7max5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit7max6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit7min1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit7min2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit7min3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit7min4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit7min5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit7min6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit8max1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit8max2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit8max3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit8max4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit8max5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit8max6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit8min1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit8min2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit8min3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit8min4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit8min5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit8min6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit9max1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit9max2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit9max3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit9max4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit9max5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit9max6" type="T_REAL" access="ReadWrite" />
+        <Node name="limit9min1" type="T_REAL" access="ReadWrite" />
+        <Node name="limit9min2" type="T_REAL" access="ReadWrite" />
+        <Node name="limit9min3" type="T_REAL" access="ReadWrite" />
+        <Node name="limit9min4" type="T_REAL" access="ReadWrite" />
+        <Node name="limit9min5" type="T_REAL" access="ReadWrite" />
+        <Node name="limit9min6" type="T_REAL" access="ReadWrite" />
+        <Node name="ManualCalisma" type="T_BOOL" access="ReadWrite" />
+        <Node name="omur_sayici" type="T_REAL" access="ReadWrite" />
+        <Node name="OtomatikCalisma" type="T_BOOL" access="ReadWrite" />
+        <Node name="r_11_13_gecikmesi" type="T_REAL" access="ReadWrite" />
+        <Node name="r_11_13_zamani" type="T_REAL" access="ReadWrite" />
+        <Node name="r_14_15_gecikmesi" type="T_REAL" access="ReadWrite" />
+        <Node name="r_14_15_zamani" type="T_REAL" access="ReadWrite" />
+        <Node name="r_1_2_gecikmesi" type="T_REAL" access="ReadWrite" />
+        <Node name="r_5_6_gecikmesi" type="T_REAL" access="ReadWrite" />
+        <Node name="r_9_10_gecikmesi" type="T_REAL" access="ReadWrite" />
+        <Node name="r_ana_klp_trs_klp_birak_gck" type="T_REAL" access="ReadWrite" />
+        <Node name="r_ana_kulp_tutucu_gecik" type="T_REAL" access="ReadWrite" />
+        <Node name="r_ana_srv_ileri_gecik_op" type="T_REAL" access="ReadWrite" />
+        <Node name="r_anasrvpoz_dummy_etikete" type="T_REAL" access="ReadWrite" />
+        <Node name="r_anasrvpoz_dummy_kaliba" type="T_REAL" access="ReadWrite" />
+        <Node name="r_anasrvpoz_urunalma_icin" type="T_REAL" access="ReadWrite" />
+        <Node name="r_anasrvpoz_urunverme_icin" type="T_REAL" access="ReadWrite" />
+        <Node name="r_babyplast_kalip_kapali" type="T_REAL" access="ReadWrite" />
+        <Node name="r_diz_konveyorden_geri_gecik_op" type="T_REAL" access="ReadWrite" />
+        <Node name="r_dizme_srv_yavas_poz" type="T_REAL" access="ReadWrite" />
+        <Node name="r_dizme_ufleme_gecikmesi" type="T_REAL" access="ReadWrite" />
+        <Node name="r_dizme_ufleme_suresi" type="T_REAL" access="ReadWrite" />
+        <Node name="r_dizme_vkm_kes_gecik" type="T_REAL" access="ReadWrite" />
+        <Node name="r_dizme_vkm_ok" type="T_REAL" access="ReadWrite" />
+        <Node name="r_dizme_vkm_ok_op" type="T_REAL" access="ReadWrite" />
+        <Node name="r_dizmesrvpoz_urunedonme" type="T_REAL" access="ReadWrite" />
+        <Node name="r_dmy_kalipta_kalma_suresi" type="T_REAL" access="ReadWrite" />
+        <Node name="r_dummy_sarma_bitti_gecik" type="T_REAL" access="ReadWrite" />
+        <Node name="r_dummy_taban_ufleme_gecik" type="T_REAL" access="ReadWrite" />
+        <Node name="r_dummy_taban_ufleme_ok" type="T_REAL" access="ReadWrite" />
+        <Node name="r_dummy_ufleme_gecikmesi" type="T_REAL" access="ReadWrite" />
+        <Node name="r_dummy_ufleme_ok" type="T_REAL" access="ReadWrite" />
+        <Node name="r_dummy_vkm2_kes_gecik" type="T_REAL" access="ReadWrite" />
+        <Node name="r_dummy_vkm_bas_gecik" type="T_REAL" access="ReadWrite" />
+        <Node name="r_dummy_vkm_kes_gecik" type="T_REAL" access="ReadWrite" />
+        <Node name="r_dummy_vkm_ok" type="T_REAL" access="ReadWrite" />
+        <Node name="r_dummydon_ref_time" type="T_REAL" access="ReadWrite" />
+        <Node name="r_dummysrvpoz_ana_geri" type="T_REAL" access="ReadWrite" />
+        <Node name="r_dzm_kulp_trns_tutma_gck" type="T_REAL" access="ReadWrite" />
+        <Node name="r_etk_ufleme2_suresi" type="T_REAL" access="ReadWrite" />
+        <Node name="r_etk_vurma_zamani" type="T_REAL" access="ReadWrite" />
+        <Node name="r_guv_alan_dinamik_poz" type="T_REAL" access="ReadWrite" />
+        <Node name="r_hazirlik_suresi" type="T_REAL" access="ReadWrite" />
+        <Node name="r_kalip_acik_timeout" type="T_REAL" access="ReadWrite" />
+        <Node name="r_kalip_kapa_gecik" type="T_REAL" access="ReadWrite" />
+        <Node name="r_kalip_kapa_sinyali_uzatma" type="T_REAL" access="ReadWrite" />
+        <Node name="r_konveyor_durma2_zamani" type="T_REAL" access="ReadWrite" />
+        <Node name="r_konveyor_durma_zamani" type="T_REAL" access="ReadWrite" />
+        <Node name="r_konveyor_piston3_kapatma" type="T_REAL" access="ReadWrite" />
+        <Node name="r_konveyor_suresi" type="T_REAL" access="ReadWrite" />
+        <Node name="r_kulp_alma_suresi" type="T_REAL" access="ReadWrite" />
+        <Node name="r_kulp_baski_gecikmesi" type="T_REAL" access="ReadWrite" />
+        <Node name="r_kulp_baski_suresi" type="T_REAL" access="ReadWrite" />
+        <Node name="r_kulp_baslama_gecikmesi" type="T_REAL" access="ReadWrite" />
+        <Node name="r_kulp_trans_asagi_gecik" type="T_REAL" access="ReadWrite" />
+        <Node name="r_kulp_trans_ileri_gecik" type="T_REAL" access="ReadWrite" />
+        <Node name="r_makinatakeout" type="T_REAL" access="ReadWrite" />
+        <Node name="r_parca_yuksekligi" type="T_REAL" access="ReadWrite" />
+        <Node name="r_Ref_konveyor_durma_zamani" type="T_REAL" access="ReadWrite" />
+        <Node name="r_robot_bekleme" type="T_REAL" access="ReadWrite" />
+        <Node name="r_robot_guv_ileri_giderken" type="T_REAL" access="ReadWrite" />
+        <Node name="r_sar_etk_dmyde_ileri_gecik_op" type="T_REAL" access="ReadWrite" />
+        <Node name="r_sar_etk_ufleme_gecik" type="T_REAL" access="ReadWrite" />
+        <Node name="r_sarmal_etk_ileri_srs1" type="T_REAL" access="ReadWrite" />
+        <Node name="r_sarmal_etk_ufleme" type="T_REAL" access="ReadWrite" />
+        <Node name="r_sarmal_etk_vkm_kes_gecik" type="T_REAL" access="ReadWrite" />
+        <Node name="r_sarmal_etk_vkm_ok" type="T_REAL" access="ReadWrite" />
+        <Node name="r_sarmal_etk_vkm_vafi_ufleme_gecik" type="T_REAL" access="ReadWrite" />
+        <Node name="r_sarmal_etk_vkm_valfi_ufleme_ok" type="T_REAL" access="ReadWrite" />
+        <Node name="r_siyirici_ileri_gecik" type="T_REAL" access="ReadWrite" />
+        <Node name="r_statik_bas_gecikmesi" type="T_REAL" access="ReadWrite" />
+        <Node name="r_statik_suresi" type="T_REAL" access="ReadWrite" />
+        <Node name="r_taban_etk_vkm_vafi_ufleme_gec" type="T_REAL" access="ReadWrite" />
+        <Node name="r_taban_etk_vkm_vafi_ufleme_gecik" type="T_REAL" access="ReadWrite" />
+        <Node name="r_taban_etk_vkm_valfi_ufleme_ok" type="T_REAL" access="ReadWrite" />
+        <Node name="r_takeout" type="T_REAL" access="ReadWrite" />
+        <Node name="r_ufleme_gecik_op" type="T_REAL" access="ReadWrite" />
+        <Node name="r_ufleme_op" type="T_REAL" access="ReadWrite" />
+        <Node name="r_urun_ileri" type="T_REAL" access="ReadWrite" />
+        <Node name="r_urun_tasiyici_donme_poz" type="T_REAL" access="ReadWrite" />
+        <Node name="r_urun_tasiyici_yukari_gecik" type="T_REAL" access="ReadWrite" />
+        <Node name="r_urun_trans_ufleme_gecik" type="T_REAL" access="ReadWrite" />
+        <Node name="r_urun_trans_ufleme_suresi" type="T_REAL" access="ReadWrite" />
+        <Node name="r_urun_trans_vkm_kes_gecik" type="T_REAL" access="ReadWrite" />
+        <Node name="r_urun_ufleme_suresi" type="T_REAL" access="ReadWrite" />
+        <Node name="r_urun_verme_zamani" type="T_REAL" access="ReadWrite" />
+        <Node name="r_urun_vkm_kes_gecik" type="T_REAL" access="ReadWrite" />
+        <Node name="r_urunal_time" type="T_REAL" access="ReadWrite" />
+        <Node name="r_valf1_aktif" type="T_REAL" access="ReadWrite" />
+        <Node name="r_valf1_gecikme" type="T_REAL" access="ReadWrite" />
+        <Node name="r_valf2_aktif" type="T_REAL" access="ReadWrite" />
+        <Node name="r_valf2_gecikme" type="T_REAL" access="ReadWrite" />
+        <Node name="r_valf3_aktif" type="T_REAL" access="ReadWrite" />
+        <Node name="r_valf3_gecikme" type="T_REAL" access="ReadWrite" />
+        <Node name="r_valf4_aktif" type="T_REAL" access="ReadWrite" />
+        <Node name="r_valf4_gecikme" type="T_REAL" access="ReadWrite" />
+        <Node name="r_Z_konveyorden_Yukari_gecik" type="T_REAL" access="ReadWrite" />
+        <Node name="r_Z_srv_yukari_yavas_poz" type="T_REAL" access="ReadWrite" />
+        <Node name="r_Z_ufleme_gecikmesi" type="T_REAL" access="ReadWrite" />
+        <Node name="r_Z_ufleme_suresi" type="T_REAL" access="ReadWrite" />
+        <Node name="r_Z_vakum_gecik_zamani" type="T_REAL" access="ReadWrite" />
+        <Node name="r_Z_vakum_zamani" type="T_REAL" access="ReadWrite" />
+        <Node name="rAnaPozDummyKalibaGirmesiicin" type="T_REAL" access="ReadWrite" />
+        <Node name="rAnaRef" type="T_REAL" access="ReadWrite" />
+        <Node name="rAnaSrvBaslangicAcc" type="T_REAL" access="ReadWrite" />
+        <Node name="rAnaSrvBaslangicDec" type="T_REAL" access="ReadWrite" />
+        <Node name="rAnaSrvBaslangicVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rAnaSrvEtkAcc" type="T_REAL" access="ReadWrite" />
+        <Node name="rAnaSrvEtkDec" type="T_REAL" access="ReadWrite" />
+        <Node name="rAnaSrvEtkPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rAnaSrvEtkVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rAnaSrvFircaGeriAcc" type="T_REAL" access="ReadWrite" />
+        <Node name="rAnaSrvfircaGeriDec" type="T_REAL" access="ReadWrite" />
+        <Node name="rAnaSrvFircaGeriPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rAnaSrvFircaGeriVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rAnaSrvFircaileriAcc" type="T_REAL" access="ReadWrite" />
+        <Node name="rAnaSrvfircaileriDec" type="T_REAL" access="ReadWrite" />
+        <Node name="rAnaSrvFircaileriPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rAnaSrvFircaileriVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rAnaSrvGeriAcc" type="T_REAL" access="ReadWrite" />
+        <Node name="rAnaSrvGeriDec" type="T_REAL" access="ReadWrite" />
+        <Node name="rAnaSrvGeriPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rAnaSrvGeriVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rAnaSrvileriAcc" type="T_REAL" access="ReadWrite" />
+        <Node name="rAnaSrvileriDec" type="T_REAL" access="ReadWrite" />
+        <Node name="rAnaSrvileriPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rAnaSrvileriVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rAnaSrvJogVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rAnaSrvOrtaPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rAnaSrvOrtaVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rAnaSrvOrtayaAcc" type="T_REAL" access="ReadWrite" />
+        <Node name="rAnaSrvOrtayaDec" type="T_REAL" access="ReadWrite" />
+        <Node name="rBosVar1" type="T_REAL" access="ReadWrite" />
+        <Node name="rBosVar10" type="T_REAL" access="ReadWrite" />
+        <Node name="rBosVar11" type="T_REAL" access="ReadWrite" />
+        <Node name="rBosVar12" type="T_REAL" access="ReadWrite" />
+        <Node name="rBosVar13" type="T_REAL" access="ReadWrite" />
+        <Node name="rBosVar14" type="T_REAL" access="ReadWrite" />
+        <Node name="rBosVar15" type="T_REAL" access="ReadWrite" />
+        <Node name="rBosVar16" type="T_REAL" access="ReadWrite" />
+        <Node name="rBosVar17" type="T_REAL" access="ReadWrite" />
+        <Node name="rBosVar18" type="T_REAL" access="ReadWrite" />
+        <Node name="rBosVar19" type="T_REAL" access="ReadWrite" />
+        <Node name="rBosVar2" type="T_REAL" access="ReadWrite" />
+        <Node name="rBosVar20" type="T_REAL" access="ReadWrite" />
+        <Node name="rBosVar3" type="T_REAL" access="ReadWrite" />
+        <Node name="rBosVar4" type="T_REAL" access="ReadWrite" />
+        <Node name="rBosVar5" type="T_REAL" access="ReadWrite" />
+        <Node name="rBosVar6" type="T_REAL" access="ReadWrite" />
+        <Node name="rBosVar7" type="T_REAL" access="ReadWrite" />
+        <Node name="rBosVar8" type="T_REAL" access="ReadWrite" />
+        <Node name="rBosVar9" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeIkinciUrunPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeKonveyorPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeRef" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrv_ikinci_urun_Poz" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvBaslangicAcc" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvBaslangicDec" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvBaslangicPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvBaslangicVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvikinciurunAcc" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvikinciurunDec" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvikinciUrunVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvikinviurunDec" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvJogVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvKonveyorAcc" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvKonveyorDec" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvKonveyorPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvKonveyorVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvKulpAcc" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvKulpDec" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvKulpPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvKulpVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvKulpYukariAcc" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvKulpYukariDec" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvKulpYukariPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvKulpYukariVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvOrtaPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvOrtaVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvOrtayaAcc" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvOrtayaDec" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvUrunAlmadanYukariAcc" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvUrunAlmadanYukariDec" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvUrunAlmadanYukariPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvUrunAlmaPos" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvYavaslamaPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvYukariAcc" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvYukariDec" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvYukariPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvYukariVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvYukariYavasPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizmeSrvYvsPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rDizSrvUrunAlmaYukariVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rDonerTabla0Poz" type="T_REAL" access="ReadWrite" />
+        <Node name="rDonerTabla180Poz" type="T_REAL" access="ReadWrite" />
+        <Node name="rDonerTablaJogVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rDonerTablaSrvRef" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummyDonRef" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummyDonSrv180Acc" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummyDonSrv180Dec" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummyDonSrv180Poz" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummyDonSrvBaslangicAcc" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummyDonSrvBaslangicDec" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummyDonSrvBaslangicPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummyDonSrvBaslangicVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummyDonSrvGeriAcc" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummyDonSrvGeriDec" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummyDonSrvGeriVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummyDonSrvileriAcc" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummyDonSrvileriDec" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummyDonSrvileriPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummyDonSrvileriVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummyDonSrvJogVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummyRef" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvBaslangicAcc" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvBaslangicDec" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvBaslangicPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvBaslangicVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvEtiketAcc" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvEtiketDec" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvEtiketPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvEtikettenGeriAcc" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvEtikettenGeriDec" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvEtikettenGeriPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvEtikettenGeriVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvEtiketVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvJogVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvKalipAcc" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvKalipBekleDnmkPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvKalipDec" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvKalipPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvKaliptanGeriAcc" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvKaliptanGeriDec" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvKaliptanGeriPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvKaliptanGeriVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvKalipVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvKalipYavasGeriAcc" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvKalipYavasGeriDec" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvKalipYavasGeriPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvKalipYavasGeriVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvSarmaAcc" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvSarmaDec" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvSarmaPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvSarmaVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvUflemePoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rDummySrvYavaslamaPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="recipesname" type="T_STRING" access="ReadWrite" />
+        <Node name="RecordLog" type="T_INT" access="ReadWrite" />
+        <Node name="rEtiketRef" type="T_REAL" access="ReadWrite" />
+        <Node name="rEtiketSrvAciAcc" type="T_REAL" access="ReadWrite" />
+        <Node name="rEtiketSrvAciDec" type="T_REAL" access="ReadWrite" />
+        <Node name="rEtiketSrvAciPos" type="T_REAL" access="ReadWrite" />
+        <Node name="rEtiketSrvAciVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rEtiketSrvBaslangicAcc" type="T_REAL" access="ReadWrite" />
+        <Node name="rEtiketSrvBaslangicDec" type="T_REAL" access="ReadWrite" />
+        <Node name="rEtiketSrvBaslangicPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rEtiketSrvBaslangicVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rEtiketSrvDummyAcc" type="T_REAL" access="ReadWrite" />
+        <Node name="rEtiketSrvDummyDec" type="T_REAL" access="ReadWrite" />
+        <Node name="rEtiketSrvDummyPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rEtiketSrvDummyVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rEtiketSrvJogVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rEtiketSrvMagazinAcc" type="T_REAL" access="ReadWrite" />
+        <Node name="rEtiketSrvMagazinDec" type="T_REAL" access="ReadWrite" />
+        <Node name="rEtiketSrvMagazinPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rEtiketSrvMagazinVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rKonveyorBirTurPos" type="T_REAL" access="ReadWrite" />
+        <Node name="rKonveyorRef" type="T_REAL" access="ReadWrite" />
+        <Node name="rKonveyorSrvJogVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="RobotDevreDisi" type="T_BOOL" access="ReadWrite" />
+        <Node name="rUrunTasiyiciSrv_ikinci_urun_Poz" type="T_REAL" access="ReadWrite" />
+        <Node name="rUrunTransRef" type="T_REAL" access="ReadWrite" />
+        <Node name="rXSrvJogVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rXSrvRef" type="T_REAL" access="ReadWrite" />
+        <Node name="rXSrvUrunAlmaPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rXSrvUrunBirakmaPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rYSrvJogVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rYSrvRef" type="T_REAL" access="ReadWrite" />
+        <Node name="rYSrvUrunAlmaPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rYsrvUrunBirakmaPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rZ_srv_konveyor_yavas_poz" type="T_REAL" access="ReadWrite" />
+        <Node name="rZ_srv_Yukari_yavas_poz" type="T_REAL" access="ReadWrite" />
+        <Node name="rZSrvBeklemePoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rZSrvJogVelo" type="T_REAL" access="ReadWrite" />
+        <Node name="rZSrvKonveyorPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rZSrvRef" type="T_REAL" access="ReadWrite" />
+        <Node name="rZSrvUrunAlmaPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rZSrvUrunBirakmaPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="rZSrvYvsPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="s_sifre3kat_op" type="T_STRING" access="ReadWrite" />
+        <Node name="s_sifre_op" type="T_STRING" access="ReadWrite" />
+        <Node name="s_sifrecarpim2_op" type="T_STRING" access="ReadWrite" />
+        <Node name="s_sifrecarpim3_op" type="T_STRING" access="ReadWrite" />
+        <Node name="s_sifrecarpim4_op" type="T_STRING" access="ReadWrite" />
+        <Node name="s_sifrecarpim5_op" type="T_STRING" access="ReadWrite" />
+        <Node name="s_sifrecarpim_op" type="T_STRING" access="ReadWrite" />
+        <Node name="sanal_ana_srv_gercek_poz" type="T_LREAL" access="ReadWrite" />
+        <Node name="sanal_dizme_srv_gercek_poz" type="T_REAL" access="ReadWrite" />
+        <Node name="sayma_gercek_adet" type="T_REAL" access="ReadWrite" />
+        <Node name="sBos1" type="T_STRING" access="ReadWrite" />
+        <Node name="sBos10" type="T_STRING" access="ReadWrite" />
+        <Node name="sBos11" type="T_STRING" access="ReadWrite" />
+        <Node name="sBos12" type="T_STRING" access="ReadWrite" />
+        <Node name="sBos13" type="T_STRING" access="ReadWrite" />
+        <Node name="sBos14" type="T_STRING" access="ReadWrite" />
+        <Node name="sBos15" type="T_STRING" access="ReadWrite" />
+        <Node name="sBos2" type="T_STRING" access="ReadWrite" />
+        <Node name="sBos3" type="T_STRING" access="ReadWrite" />
+        <Node name="sBos4" type="T_STRING" access="ReadWrite" />
+        <Node name="sBos5" type="T_STRING" access="ReadWrite" />
+        <Node name="sBos6" type="T_STRING" access="ReadWrite" />
+        <Node name="sBos7" type="T_STRING" access="ReadWrite" />
+        <Node name="sBos8" type="T_STRING" access="ReadWrite" />
+        <Node name="sBos9" type="T_STRING" access="ReadWrite" />
+        <Node name="sServisTarihiGiris1" type="T_STRING" access="ReadWrite" />
+        <Node name="sServisTarihiGiris2" type="T_STRING" access="ReadWrite" />
+        <Node name="Sss" type="T_STRING" access="ReadWrite" />
+        <Node name="sSystemTimeGiris" type="T_STRING" access="ReadWrite" />
+        <Node name="StepCalisma" type="T_BOOL" access="ReadWrite" />
+        <Node name="uint_AyGiris" type="T_UINT" access="ReadWrite" />
+        <Node name="uint_DakikaGiris" type="T_UINT" access="ReadWrite" />
+        <Node name="uint_GunGiris" type="T_UINT" access="ReadWrite" />
+        <Node name="uint_SaatGiris" type="T_UINT" access="ReadWrite" />
+        <Node name="uint_YilGiris" type="T_UINT" access="ReadWrite" />
+        <Node name="urun1" type="T_INT" access="ReadWrite" />
+        <Node name="urun1_P1de" type="T_INT" access="ReadWrite" />
+        <Node name="urun1_P2de" type="T_INT" access="ReadWrite" />
+        <Node name="urun1_P3de" type="T_INT" access="ReadWrite" />
+        <Node name="urun1_P4de" type="T_INT" access="ReadWrite" />
+        <Node name="urun1_P5de" type="T_INT" access="ReadWrite" />
+        <Node name="urun1_P6de" type="T_INT" access="ReadWrite" />
+        <Node name="urun1_P7de" type="T_INT" access="ReadWrite" />
+        <Node name="urun1_P8de" type="T_INT" access="ReadWrite" />
+        <Node name="urun2" type="T_INT" access="ReadWrite" />
+        <Node name="urun3" type="T_INT" access="ReadWrite" />
+        <Node name="urun4" type="T_INT" access="ReadWrite" />
+        <Node name="urun5" type="T_INT" access="ReadWrite" />
+        <Node name="urun6" type="T_INT" access="ReadWrite" />
+        <Node name="urun7" type="T_INT" access="ReadWrite" />
+        <Node name="urun8" type="T_INT" access="ReadWrite" />
+        <Node name="urun_aktif" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_tasiyici_ufleme_aktif" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_tasiyici_ufleme_pasif" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_tasiyici_vkm_aktif" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_tasiyici_vkm_aktif2" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_tasiyici_vkm_pasif" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_tasiyici_vkm_pasif2" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_ufleme_aktif" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_ufleme_aktif2" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_ufleme_aktif6" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_ufleme_aktif7" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_ufleme_pasif" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_ufleme_pasif2" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_ufleme_pasif6" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_ufleme_pasif7" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_vkm_aktif" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_vkm_aktif2" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_vkm_aktif4" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_vkm_aktif5" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_vkm_pasif" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_vkm_pasif2" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_vkm_pasif4" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_trans_vkm_pasif5" type="T_BOOL" access="ReadWrite" />
+        <Node name="urun_ufleme_aktif" type="T_BOOL" access="ReadWrite" />
+        <Node name="UrunTasiyiciGercekPoz" type="T_REAL" access="ReadWrite" />
+        <Node name="w_atilacak_urun_adeti" type="T_WORD" access="ReadWrite" />
+        <Node name="w_etiket_deger" type="T_WORD" access="ReadWrite" />
+        <Node name="w_ilk_calismada_atilacak_urun" type="T_WORD" access="ReadWrite" />
+        <Node name="w_kulp_sayisi" type="T_WORD" access="ReadWrite" />
+        <Node name="wDizme_sayisi" type="T_WORD" access="ReadWrite" />
+        <Node name="X_srv_gercek_poz" type="T_REAL" access="ReadWrite" />
+        <Node name="Y_srv_gercek_poz" type="T_REAL" access="ReadWrite" />
+        <Node name="Z_srv_gercek_poz" type="T_REAL" access="ReadWrite" />
+        <Node name="Z_srv_konveyor_poz" type="T_REAL" access="ReadWrite" />
+        <Node name="Z_ufleme_aktif" type="T_BOOL" access="ReadWrite" />
+        <Node name="Z_vkm_aktif" type="T_BOOL" access="ReadWrite" />
+        <Node name="Z_vkm_pasif" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="STEPLER">
+        <Node name="Step_AnaServo" type="T_StepFB" access="ReadWrite" />
+        <Node name="Step_Dizme" type="T_StepFB" access="ReadWrite" />
+        <Node name="Step_Dummy" type="T_StepFB" access="ReadWrite" />
+        <Node name="Step_Etiket" type="T_StepFB" access="ReadWrite" />
+        <Node name="Step_KulpCakma" type="T_StepFB" access="ReadWrite" />
+        <Node name="Step_Urun" type="T_StepFB" access="ReadWrite" />
+        <Node name="Step_UrunTasiyicii" type="T_StepFB_1" access="ReadWrite" />
+        <Node name="Step_UrunTasiyicii2" type="T_StepFB_1" access="ReadWrite" />
+        <Node name="Step_UrunTrans" type="T_StepFB" access="ReadWrite" />
+      </Node>
+    </Node>
+  </NodeList>
+</Symbolconfiguration>
