@@ -4,5 +4,5 @@ This automation system allows digital monitoring of production processes, result
 
 For this tested automation program with a large footprint;
 
- # The appropriate model PLC program must be licensed.
- # It must be installed on a PC with a high graphics card.
+  * The appropriate model PLC program must be licensed.
+  * It must be installed on a PC with a high graphics card.
